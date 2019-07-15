@@ -1,5 +1,7 @@
 class Booking < ApplicationRecord
-  has_many :reviews
-  belongs_to :animal
   belongs_to :user
+  belongs_to :animal
+  has_many :reviews
+
+  validates :date, presence: true
 end
