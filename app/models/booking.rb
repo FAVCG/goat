@@ -1,0 +1,5 @@
+class Booking < ApplicationRecord
+  has_many :reviews
+  belongs_to :animal
+  belongs_to :user
+end
