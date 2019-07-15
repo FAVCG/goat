@@ -6,7 +6,6 @@ class CreateAnimals < ActiveRecord::Migration[5.2]
       t.text :description
       t.integer :price
       t.references :user, foreign_key: true
-      t.references :booking, foreign_key: true
 
       t.timestamps
     end
