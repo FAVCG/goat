@@ -1,0 +1,8 @@
+<h1>Booking list</h1>
+
+<ol>
+<% @bookings.each do |booking| %>
+
+<li>Date: <%= booking.date %>. Client:<%= User.find(booking.user_id).name %>. Owner:<%= User.find(booking.animal_id.user_id).name %></li>
+
+</ol>
