@@ -12,4 +12,9 @@
 
   validates :description, presence: true
   mount_uploader :photo, PhotoUploader
+
+
+  def self.types
+    self.distinct.pluck(:animal_type)
+  end
 end
