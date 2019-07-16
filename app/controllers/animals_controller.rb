@@ -1,6 +1,12 @@
 class AnimalsController < ApplicationController
   def index
-    @animals = Animal.all
+    search = params[:animal_type]
+
+    if search
+      @animals = Animal.where(animal_type: search)
+    else
+      @animals = Animal.all
+    end
   end
 
   def new
