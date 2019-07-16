@@ -5,8 +5,36 @@
 
 .navbar-lewagon .navbar-collapse {
   flex-grow: 0;
+   padding: 8px;
 }
 
 .navbar-lewagon .navbar-brand img {
   width: 40px;
 }
+
+.nav-item {
+padding: 10px;
+  a {
+    color: black;
+  }
+}
+
+.nav-item a:hover {
+  color: white;
+}
+
+
+.navbar-brand img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+img {
+  vertical-align: middle;
+}
+
+.navbar-lewagon {
+  background-color: darkolivegreen;
+}
+
