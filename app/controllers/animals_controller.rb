@@ -1,11 +1,21 @@
 class AnimalsController < ApplicationController
   def index
     search = params[:animal_type]
+    user_id = params[:user_id]
 
-    if search
-      @animals = Animal.where(animal_type: search)
+    if user_id
+      user = User.find(user_id)
+      if search
+        @animals = user.owned_animals.where(animal_type: search)
+      else
+        @animals = user.owned_animals
+      end
     else
-      @animals = Animal.all
+      if search
+        @animals = Animal.where(animal_type: search)
+      else
+        @animals = Animal.all
+      end
     end
   end
 
