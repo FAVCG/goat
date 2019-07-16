@@ -14,22 +14,22 @@
 
 .nav-item {
 padding: 10px;
-
+  a {
+    color: black;
+  }
 }
 
 .nav-item a:hover {
   color: white;
 }
 
-a {
-  color: black;
-}
 
 .navbar-brand img {
   width: 40px;
   height: 40px;
   border-radius: 50%;
 }
+
 img {
   vertical-align: middle;
 }
