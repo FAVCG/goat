@@ -17,6 +17,11 @@ class AnimalsController < ApplicationController
     end
   end
 
+  def show
+    @animal = Animal.find(params[:id])
+    @booking = Booking.new
+  end
+
   private
 
   def animal_params
