@@ -1,10 +1,11 @@
 Rails.application.routes.draw do
   devise_for :users
+  root to: 'pages#home'
 
-  resources :animals, only: [:index]
+  resources :animals, only: [:index, :new, :create]
 
   resources :users, only: [] do
-    resources :animals, only: [:index, :new, :create]
+    resources :animals, only: [:index]
   end
 
   resources :animals, except: [:index, :new, :create] do

@@ -20,9 +20,14 @@ class AnimalsController < ApplicationController
     end
   end
 
+  def show
+    @animal = Animal.find(params[:id])
+    @booking = Booking.new
+  end
+
   private
 
   def animal_params
-    params.require(:animal).permit(:name, :type, :description, :price)
+    params.require(:animal).permit(:name, :animal_type, :description, :price, :photo)
   end
 end
