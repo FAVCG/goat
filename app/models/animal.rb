@@ -7,7 +7,7 @@
   has_many :reviews, through: :bookings
 
   validates :name, presence: true
-  validates :type, presence: true
+  validates :animal_type, presence: true
   validates :price, presence: true
 
   validates :description, presence: true
