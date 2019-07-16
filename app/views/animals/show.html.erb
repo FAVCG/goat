@@ -1,3 +1,22 @@
-<h1>blahhhhh</h1>
+<div class="container">
+  <div class="row justify-content-center mt-5">
+    <div class="col-4">
+      <div class="card-trip">
+        <%= cl_image_tag @animal.photo, height: 300, width: 400, crop: :fill %>
+        <div class="card-trip-infos">
+          <div>
+            <h2><%= @animal.name %></h2>
 
-<%= render "new_booking_form", animal: @animal, booking: @booking %>
+            <p><%= @animal.animal_type.upcase %> | <%= @animal.description %></p>
+
+          </div>
+          <h2 class="card-trip-pricing">$<%= @animal.price %></h2>
+          <img src='https://kitt.lewagon.com/placeholder/users/krokrob' class="card-trip-user avatar-bordered"/>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</div>
+
