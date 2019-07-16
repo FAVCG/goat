@@ -5,10 +5,8 @@ class BookingsController  < ApplicationController
   end
 
   def show
-    @booking =-Booking.find(params[:id])
+    @booking = Booking.find(params[:id])
   end
-
-
 
   def create
     @animal = Animal.find(params[:animal_id])
@@ -16,7 +14,7 @@ class BookingsController  < ApplicationController
     @booking.animal = @animal
     @booking.user = current_user
     if @booking.save
-      redirect_to @animal
+      redirect_to @booking
     else
       render :new
     end

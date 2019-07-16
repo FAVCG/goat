@@ -28,14 +28,18 @@ User.first(2).each do |user|
       name: Faker::Games::Pokemon.name,
       description: Faker::TvShows::NewGirl.quote,
       price: rand(10..1000000),
+      location: Faker::Address.state,
       user: user
     )
+   a.remote_photo_url = 'https://ichef.bbci.co.uk/news/660/cpsprodpb/B875/production/_102512274_gettyimages-518360318.jpg'
+   a.save
+
     puts "- Animal #{a.name} was created!"
    10.times do
      booker = User.last(3).sample
      b = Booking.new(
         date: Date.today + rand(-20..0).days,
-        location: "Buenos Aires",
+        location: Faker::Address.state,
         )
      b.user = booker
      b.animal = a
