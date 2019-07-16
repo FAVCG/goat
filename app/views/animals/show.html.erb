@@ -1,3 +1,9 @@
-<h1>blahhhhh</h1>
+<h1>Animal</h1>
+
+<%= cl_image_tag @animal.photo, height: 300, width: 400, crop: :fill %>
+<h1><%= @animal.name %></h1>
+<h2><%= @animal.animal_type %></h2>
+<h2><%= @animal.description %></h2>
+<h2><%= @animal.price %></h2>
 
 <%= render "new_booking_form", animal: @animal, booking: @booking %>

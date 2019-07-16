@@ -1,8 +1,11 @@
-<h1>Booking list</h1>
+<div class= "img">
 
-<ol>
-<% @bookings.each do |booking| %>
+<img src= "https://ichef.bbci.co.uk/news/660/cpsprodpb/B875/production/_102512274_gettyimages-518360318.jpg">
+</div>
+<h1>Booking Confirmation</h1>
+<h2>Date: <%= @booking.date %></h2>
+<h2>Location: <%= @booking.animal.location %></h2>
+<h2>Confirmation number: ezfghx16</h2>
+<h2>Enjoy your time!!</h2>
 
-<li>Date: <%= booking.date %>. Client:<%= User.find(booking.user_id).name %>. Owner:<%= User.find(booking.animal_id.user_id).name %></li>
 
-</ol>

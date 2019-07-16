@@ -12,7 +12,8 @@ Rails.application.routes.draw do
     resources :bookings, only: [:new, :create]
   end
 
-  resources :bookings, except: [:index, :new, :create] do
+
+  resources :bookings, except:[:new, :create] do
     resources :reviews, only: [:create]
   end
 end
