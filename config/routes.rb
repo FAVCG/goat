@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   resources :animals, only: [:index, :new, :create]
 
   resources :users, only: [] do
-    resources :animals, only: [:index, :new, :create]
+    resources :animals, only: [:index]
   end
 
   resources :animals, except: [:index, :new, :create] do

@@ -1,1 +1,9 @@
-<h1>Working</h1>
+<div class="container">
+  <div class="row">
+    <% @animals.each do |animal| %>
+      <div class="col-4">
+        <%= render "animal_card", animal: animal %>
+      </div>
+    <% end %>
+  </div>
+</div>
