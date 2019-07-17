@@ -17,4 +17,40 @@
       </div>
     <% end %>
   </div>
+
+    <h2>Bookings that i did</h2>
+
+
+  <div class="row">
+    <ul>
+
+    <% @others_animals_bookings.each do |booking| %>
+      <div class="col-4">
+        <li>Booking date: <%= booking.date %>.
+        Location<%= booking.location %>.
+        Booked animal: <%= booking.animal.name %></li>
+      </div>
+    </ul>
+    <% end %>
+  </div>
+
+
+
+
+    <h2>Bookings that someone else did</h2>
+
+
+  <div class="row">
+    <ul>
+    <% @my_animals_bookings.each do |booking| %>
+      <div class="col-4">
+        <li>Booking date: <%= booking.date %>.
+        Location<%= booking.location %>.
+        Booked animal: <%= booking.animal.name %>Client Email: <%= booking.user.email %></li>
+      </div>
+    </ul>
+    <% end %>
+  </div>
 </div>
+
+
