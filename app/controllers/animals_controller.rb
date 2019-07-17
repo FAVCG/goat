@@ -1,4 +1,5 @@
 class AnimalsController < ApplicationController
+  before_action :set_animal, only: [:show, :edit, :update, :destroy]
   def index
     search = params[:animal_type]
     user_id = params[:user_id]
@@ -6,24 +7,26 @@ class AnimalsController < ApplicationController
     if user_id
       user = User.find(user_id)
       if search
-        @animals = user.owned_animals.where(animal_type: search)
+        # @animals = user.owned_animals.where(animal_type: search)
+        @animals = policy_scope(Animal).where(user: user, animal_type: search)
       else
-        @animals = user.owned_animals
+        # @animals = user.owned_animals
+        @animals = policy_scope(Animal).where(user: user)
       end
     else
       if search
-        @animals = Animal.where(animal_type: search)
+        @animals = policy_scope(Animal).where(animal_type: search)
       else
-        @animals = Animal.all
+        @animals = policy_scope(Animal)
       end
     end
   end
 
   def new
     @animal = Animal.new
+    authorize @animal
   end
   def show
-    @animal = Animal.find(params[:id])
   end
   def create
     @animal = Animal.new(animal_params)
@@ -36,20 +39,17 @@ class AnimalsController < ApplicationController
   end
 
   def show
-    @animal = Animal.find(params[:id])
     @booking = Booking.new
   end
   def destroy
-    @animal = Animal.find(params[:id])
     @animal.destroy
     redirect_to admin_animals_path, notice: 'Animal was successfully destroyed.'
   end
 
   def edit
-    @animal = Animal.find(params[:id])
+
   end
   def update
-        @animal = Animal.find(params[:id])
 
     if @animal.update(animal_params)
       redirect_to @animal, notice: 'Your animal was successfully updated.'
@@ -61,5 +61,9 @@ class AnimalsController < ApplicationController
 
   def animal_params
     params.require(:animal).permit(:name, :animal_type, :description, :price, :photo, :location)
+  end
+  def set_animal
+    @animal = Animal.find(params[:id])
+    authorize @animal
   end
 end

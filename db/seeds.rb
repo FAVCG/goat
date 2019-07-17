@@ -22,12 +22,12 @@ end
 
 puts "Starting seeding process!"
 User.first(2).each do |user|
-  3.times do
+  10.times do
    a = Animal.create!(
-      animal_type: Faker::Creature::Animal.name,
+      animal_type: ["Dog", "Rabbit", "Cow", "Chicken", "Horse", "Pig", "Goat", "Cat", "Duck", "Donkey", "Ferret", "Monkeys"].sample,
       name: Faker::Games::Pokemon.name,
       description: Faker::TvShows::NewGirl.quote,
-      price: rand(10..1000000),
+      price: rand(10..5000),
       location: Faker::Address.state,
       user: user
     )
