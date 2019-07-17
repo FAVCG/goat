@@ -1,0 +1,12 @@
+<div class="card-product">
+  <img src=<%= booking.animal.photo %> />
+  <div class="card-product-infos">
+    <h2>Booked animal: <%= booking.animal.name %></h2>
+    <p>Booked on: <%= booking.created_at %></p>
+    <p>Booking date: <%= booking.date %></p>
+    <p>Location: <%= booking.location %></p>
+    <p>Animal's owner email: <%= booking.user.email %></p>
+    <p>Booking confirmation: <%= booking.confirmed == true ? "Confirmed" : "Not confirmed" %></p>
+  </div>
+</div>
+

@@ -1,0 +1,24 @@
+<div class="card-product" id="booking-<%= booking.id %>">
+  <img src=<%= booking.animal.photo %> />
+  <div class="card-product-infos">
+    <h2>Booked animal: <%= booking.animal.name %></h2>
+    <p>Booked on: <%= booking.created_at %></p>
+    <p>Booking date: <%= booking.date %></p>
+    <p>Location: <%= booking.location %></p>
+    <p>Animal's owner email: <%= booking.user.email %></p>
+    <p><strong>Booking confirmation: <%= booking.confirmed ? "Confirmed" : "Not confirmed" %></strong></p>
+  </div>
+
+  <% if booking.confirmed %>
+  <p><%= "" %></p>
+  <% else %>
+
+  <%= form_with url: "/confirm_booking" do |form| %>
+  <%= form.hidden_field :booking_id, value: booking.id %>
+  <%= form.submit "Confirm" %>  <% end %>
+
+
+  <% end %>
+
+</div>
+

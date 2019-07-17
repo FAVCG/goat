@@ -10,8 +10,9 @@
     <h2 class="card-trip-pricing">$<%= animal.price %></h2>
     <img src='https://kitt.lewagon.com/placeholder/users/krokrob' class="card-trip-user avatar-bordered"/>
   </div>
-    <%= link_to "Delete card",  animal, method: :delete %>
-    <%= link_to 'Edit', edit_animal_path(animal) %></
-
+  <div class="container mb-1">
+    <%= link_to 'Edit card', edit_animal_path(animal) %> <br>
+     <%= link_to "Delete card",  animal, method: :delete %>
+</div>
 </div>
 

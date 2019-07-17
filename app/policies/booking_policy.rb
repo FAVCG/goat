@@ -16,6 +16,9 @@ class BookingPolicy < ApplicationPolicy
   def destroy?
     is_owner?
   end
+  def confirm?
+    is_owner?
+  end
 
   private
 
