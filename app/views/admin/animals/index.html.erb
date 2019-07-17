@@ -28,7 +28,7 @@
       <div class="col-4">
         <li>Booked on: <%= booking.created_at %>. Booking date: <%= booking.date %>.
         Location: <%= booking.location %>.
-        Booked animal: <%= booking.animal.name %></li>
+        Booked animal: <%= booking.animal.name %>. Animal's owner Email: <%= booking.user.email %>.  Booking confirmation: <%= booking.confirmed == true ? "Confirmed" : "Not confirmed" %>.</li>
       </div>
     </ul>
     <% end %>
@@ -46,7 +46,7 @@
       <div class="col-4">
         <li>Booking date: <%= booking.date %>.
         Location: <%= booking.location %>.
-        Booked animal: <%= booking.animal.name %>Animal type: <%= booking.animal.animal_type %>Client Email: <%= booking.user.email %></li>
+        Booked animal: <%= booking.animal.name %>Animal type: <%= booking.animal.animal_type %>Client Email: <%= booking.user.email %>. Booking confirmation: <%= booking.confirmed == true ? "Confirmed" : "Not confirmed" %>.</li>
       </div>
     </ul>
     <% end %>
