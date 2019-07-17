@@ -14,7 +14,44 @@
       <div class="col-4">
 
         <%= render "animal_card", animal: animal %>
+
       </div>
     <% end %>
   </div>
+
+    <h2>Bookings that i did</h2>
+
+
+  <div class="row">
+    <ul>
+
+    <% @others_animals_bookings.each do |booking| %>
+      <div class="col-4">
+        <li>Booked on: <%= booking.created_at %>. Booking date: <%= booking.date %>.
+        Location: <%= booking.location %>.
+        Booked animal: <%= booking.animal.name %>. Animal's owner Email: <%= booking.user.email %>.  Booking confirmation: <%= booking.confirmed == true ? "Confirmed" : "Not confirmed" %>.</li>
+      </div>
+    </ul>
+    <% end %>
+  </div>
+
+
+
+
+    <h2>Bookings that someone else did</h2>
+
+
+  <div class="row">
+    <ul>
+    <% @my_animals_bookings.each do |booking| %>
+      <div class="col-4">
+        <li>Booking date: <%= booking.date %>.
+        Location: <%= booking.location %>.
+        Booked animal: <%= booking.animal.name %>Animal type: <%= booking.animal.animal_type %>Client Email: <%= booking.user.email %>. Booking confirmation: <%= booking.confirmed == true ? "Confirmed" : "Not confirmed" %>.</li>
+      </div>
+    </ul>
+    <% end %>
+  </div>
 </div>
+
+
