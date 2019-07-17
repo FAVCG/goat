@@ -1,4 +1,4 @@
-<div class="card-trip mt-5">
+<div class="card-trip">
   <%= cl_image_tag animal.photo, height: 300, width: 400, crop: :fill %>
   <div class="card-trip-infos">
     <div>
@@ -10,5 +10,6 @@
     <h2 class="card-trip-pricing">$<%= animal.price %></h2>
     <img src='https://kitt.lewagon.com/placeholder/users/krokrob' class="card-trip-user avatar-bordered"/>
   </div>
+    <%= link_to "Delete card",  animal, method: :delete %>
 </div>
 

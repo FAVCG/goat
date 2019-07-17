@@ -27,7 +27,6 @@ class AnimalsController < ApplicationController
   end
   def create
     @animal = Animal.new(animal_params)
-    raise
     @animal.user = current_user
     if @animal.save
       redirect_to animal_path(@animal)
@@ -40,7 +39,11 @@ class AnimalsController < ApplicationController
     @animal = Animal.find(params[:id])
     @booking = Booking.new
   end
-
+  def destroy
+    @animal = Animal.find(params[:id])
+    @animal.destroy
+    redirect_to admin_animals_path, notice: 'Animal was successfully destroyed.'
+  end
   private
 
   def animal_params
