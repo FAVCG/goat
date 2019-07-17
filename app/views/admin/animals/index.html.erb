@@ -17,4 +17,19 @@
       </div>
     <% end %>
   </div>
+
+    <p>Booking List</p>
+  <div class="row">
+    <ul>
+    <% @bookings.each do |booking| %>
+      <div class="col-4">
+        <li>Booking date: <%= booking.date %>.
+        Location<%= booking.location %>.
+        Booked animal: <%= booking.animal.name %></li>
+      </div>
+    </ul>
+    <% end %>
+  </div>
 </div>
+
+
