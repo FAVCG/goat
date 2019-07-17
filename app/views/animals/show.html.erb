@@ -1,10 +1,14 @@
 
 <h1>Animal</h1>
 
-<%= cl_image_tag @animal.photo, height: 300, width: 400, crop: :fill %>
-<h1><%= @animal.name %></h1>
-<h2><%= @animal.animal_type %></h2>
-<h2><%= @animal.description %></h2>
-<h2><%= @animal.price %></h2>
+<div class="wrapper">
+  <div class="show-container">
+    <%= cl_image_tag @animal.photo, height: 300, width: 500, crop: :fill %>
+    <h1><%= @animal.name %></h1>
+    <h2><%= @animal.animal_type %></h2>
+    <h2><%= @animal.description %></h2>
+    <h2><%= @animal.price %></h2>
+  </div>
 
-<%= render "new_booking_form", animal: @animal, booking: @booking %>
+  <%= render "new_booking_form", animal: @animal, booking: @booking %>
+</div>
