@@ -26,8 +26,8 @@
 
     <% @others_animals_bookings.each do |booking| %>
       <div class="col-4">
-        <li>Booking date: <%= booking.date %>.
-        Location<%= booking.location %>.
+        <li>Booked on: <%= booking.created_at %>. Booking date: <%= booking.date %>.
+        Location: <%= booking.location %>.
         Booked animal: <%= booking.animal.name %></li>
       </div>
     </ul>
@@ -45,8 +45,8 @@
     <% @my_animals_bookings.each do |booking| %>
       <div class="col-4">
         <li>Booking date: <%= booking.date %>.
-        Location<%= booking.location %>.
-        Booked animal: <%= booking.animal.name %>Client Email: <%= booking.user.email %></li>
+        Location: <%= booking.location %>.
+        Booked animal: <%= booking.animal.name %>Animal type: <%= booking.animal.animal_type %>Client Email: <%= booking.user.email %></li>
       </div>
     </ul>
     <% end %>
