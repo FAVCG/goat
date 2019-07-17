@@ -2,7 +2,8 @@ class Admin::AnimalsController < ApplicationController
   def index
     # Let's anticipate on next week (with login)
     @animals = current_user.owned_animals
-    @bookings = current_user.bookings
+    @my_animals_bookings = current_user.others_bookings
+    @others_animals_bookings = current_user.bookings
   end
 
   def destroy
