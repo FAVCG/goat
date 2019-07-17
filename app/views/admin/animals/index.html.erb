@@ -1,11 +1,11 @@
-<form action="animals">
+<form action="animals" class="animals-filter">
   <% Animal.types.each do |type| %>
-  <div class="form-check form-check-inline">
-    <input class="form-check-input" type="checkbox" id="<%= type %>" name="animal_type[]" value="<%= type %>">
-    <label class="form-check-label" for="<%= type %>"><%= type %></label>
-  </div>
+    <div class="form-check form-check-inline">
+      <input class="form-check-input" type="checkbox" id="<%= type %>" name="animal_type[]" value="<%= type %>">
+      <label class="form-check-label" for="<%= type %>"><%= type.upcase %></label>
+    </div>
   <% end %>
-  <input type="submit" value="Search">
+  <input type="submit" class="btn btn-primary btn-search-animals" value="Search">
 </form>
 
 <div class="container">
@@ -30,7 +30,7 @@
 </div>
 
 <div class="col-6">
-<h2><strong>My clients's bookings</strong></h2>
+<h2><strong>My clients' bookings</strong></h2>
 
 
     <% @others_animals_bookings.each do |booking| %>
