@@ -1,5 +1,5 @@
-<div class="card-trip mt-5">
-  <%= cl_image_tag animal.photo, height: 300, width: 400, crop: :fill %>
+<div class="card-trip my-5">
+  <a href="animals/<%= animal.id %>"> <%= cl_image_tag animal.photo, height: 200, width: 400, crop: :fill %></a>
   <div class="card-trip-infos">
     <div>
       <a href="animals/<%= animal.id %>"><h2><%= animal.name %></h2>
