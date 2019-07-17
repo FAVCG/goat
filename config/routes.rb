@@ -20,4 +20,6 @@ Rails.application.routes.draw do
   resources :bookings, except:[:new, :create] do
     resources :reviews, only: [:create]
   end
+
+  post '/confirm_booking', to: 'bookings#confirm'
 end
