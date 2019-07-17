@@ -27,7 +27,7 @@ User.first(2).each do |user|
       animal_type: ["Dog", "Rabbit", "Cow", "Chicken", "Horse", "Pig", "Goat", "Cat", "Duck", "Donkey", "Ferret", "Monkeys"].sample,
       name: Faker::Games::Pokemon.name,
       description: Faker::TvShows::NewGirl.quote,
-      price: rand(10..5000),
+      price: rand(10..1000),
       location: Faker::Address.state,
       user: user
     )
