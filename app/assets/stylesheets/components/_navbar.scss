@@ -1,6 +1,9 @@
 .navbar-lewagon {
   justify-content: space-between;
-  background: white;
+  background-color: #49AF67;
+  img {
+    vertical-align: middle;
+  }
 }
 
 .navbar-lewagon .navbar-collapse {
@@ -15,12 +18,12 @@
 .nav-item {
 padding: 10px;
   a {
-    color: black;
+    color: #26282A;
   }
 }
 
 .nav-item a:hover {
-  color: white;
+  color: #2C7A5A;
 }
 
 
@@ -30,11 +33,6 @@ padding: 10px;
   border-radius: 50%;
 }
 
-img {
-  vertical-align: middle;
-}
 
-.navbar-lewagon {
-  background-color: darkolivegreen;
-}
+
 
