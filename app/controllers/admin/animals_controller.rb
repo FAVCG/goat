@@ -12,4 +12,10 @@ class Admin::AnimalsController < ApplicationController
     redirect_to admin_animals_path, notice: 'Animal was successfully destroyed.'
   end
 
+  private
+
+  def animal_params
+    params.require(:animal).permit(:name, :animal_type, :description, :price, :photo, :location)
+  end
+
 end

@@ -44,6 +44,19 @@ class AnimalsController < ApplicationController
     @animal.destroy
     redirect_to admin_animals_path, notice: 'Animal was successfully destroyed.'
   end
+
+  def edit
+    @animal = Animal.find(params[:id])
+  end
+  def update
+        @animal = Animal.find(params[:id])
+
+    if @animal.update(animal_params)
+      redirect_to @animal, notice: 'Your animal was successfully updated.'
+    else
+      render :edit
+    end
+  end
   private
 
   def animal_params
