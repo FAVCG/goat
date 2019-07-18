@@ -1,11 +1,42 @@
+<div class="container">
+
+
 <div class= "portrait">
 <div class= "_conf"> Animal Confirmed</div>
-<img src= "https://ichef.bbci.co.uk/news/660/cpsprodpb/B875/production/_102512274_gettyimages-518360318.jpg">
+</div>
+<div class="card mb-3" style="max-width:500px, max-height:500px;">
+  <div class="row no-gutters">
+    <div class="col-md-4">
+      <img src="https://ichef.bbci.co.uk/news/660/cpsprodpb/B875/production/_102512274_gettyimages-518360318.jpg" class="card-img" alt="...">
+      <div style="background-image: url('https://ichef.bbci.co.uk/news/660/cpsprodpb/B875/production/_102512274_gettyimages-518360318.jpg')">
+      </div>
+    </div>
+    <div class="col-md-8">
+      <div class="card-body">
+        <h5 class="card-title">Date: <%= @booking.date %></h5>
+        <p class="card-text">Location: <%= @booking.animal.location %></p>
+        <p class="card-text">Confirmation number: ezfghx16</p>
+
+        <p class="card-text"><small class="text-muted">Enjoy Your Time</small></p>
+      </div>
+    </div>
+  </div>
 </div>
 
-<h2>Date: <%= @booking.date %></h2>
-<h2>Location: <%= @booking.animal.location %></h2>
-<h2>Confirmation number: ezfghx16</h2>
+
+<div class="card-trip">
+  <img src= "https://ichef.bbci.co.uk/news/660/cpsprodpb/B875/production/_102512274_gettyimages-518360318.jpg"/>
+  <div class="card-trip-infos">
+    <div>
+      <h2>kjghcfhjk</h2>
+      <h2>Location: <%= @booking.animal.location %></h2>
+      <h2>Confirmation number: ezfghx16</h2>
+      <p>Date: <%= @booking.date %></p>
+    </div>
+  </div>
+</div>
+
+
+
 <h2>Enjoy your time!!</h2>
-
-
+</div>

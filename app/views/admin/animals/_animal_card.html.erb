@@ -11,8 +11,9 @@
     <img src='https://kitt.lewagon.com/placeholder/users/krokrob' class="card-trip-user avatar-bordered"/>
   </div>
   <div class="container mb-1">
-    <%= link_to 'Edit card', edit_animal_path(animal) %> <br>
-     <%= link_to "Delete card",  animal, method: :delete %>
-</div>
+    <div class="row">
+    <%= link_to 'Edit card', edit_animal_path(animal), class: "btn btn-primary btn-search-animals" %> <br>
+     <%= link_to "Delete card",  animal, method: :delete, class: "btn btn-primary btn-search-animals"%>
+</div></div>
 </div>
 

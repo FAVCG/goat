@@ -4,7 +4,6 @@
     <h2>Booked animal: <%= booking.animal.name %></h2>
     <p>Booked on: <%= booking.created_at %></p>
     <p>Booking date: <%= booking.date %></p>
-    <p>Location: <%= booking.location %></p>
     <p>Animal's owner email: <%= booking.user.email %></p>
     <p><strong>Booking confirmation: <%= booking.confirmed ? "Confirmed" : "Not confirmed" %></strong></p>
   </div>
@@ -15,7 +14,9 @@
 
     <%= form_with url: "/confirm_booking" do |form| %>
     <%= form.hidden_field :booking_id, value: booking.id %>
-    <%= form.submit "Confirm" %>  <% end %>
+    <%= form.submit "Confirm", class: "btn btn-primary btn-search-animals" %>
+    <%= form.submit "Decline", class: "btn btn-primary btn-search-animals" %>
+    <% end %>
 
 
   <% end %>

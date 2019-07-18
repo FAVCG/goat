@@ -1,4 +1,4 @@
-class AnimalsController < ApplicationController
+  class AnimalsController < ApplicationController
   before_action :set_animal, only: [:show, :edit, :update, :destroy]
   def index
     search = params[:animal_type]
