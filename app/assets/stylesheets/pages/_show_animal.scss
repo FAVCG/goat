@@ -25,15 +25,13 @@ h2{
 }
 
 .sf {
-  padding-left: 24px;
-  padding-right: 24px;
+  padding: 24px 35px;
   margin-bottom: 50px;
   border: 1px solid #e6e6e6;
   background-color: $white;
   width: 300px;
-  height: 300px;
-  padding-bottom: 50px;
-  padding-top: 35px;
+  height: 100%;
+
   display: flex;
 }
 
