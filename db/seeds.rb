@@ -107,6 +107,7 @@ names = ["Ace",
 
 
 
+
 Review.destroy_all
 Booking.destroy_all
 Animal.destroy_all
@@ -928,4 +929,4 @@ end
    end
   end
 end
-
+puts "Finished seeding process!"

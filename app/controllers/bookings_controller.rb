@@ -21,7 +21,7 @@ class BookingsController  < ApplicationController
     if @booking.save
       redirect_to @booking
     else
-      render :new
+      render "animals/show"
     end
   end
 
@@ -39,7 +39,7 @@ class BookingsController  < ApplicationController
   private
 
   def booking_params
-    params.require(:booking).permit(:date, :confirmed, :location)
+    params.require(:booking).permit(:date, :confirmed)
 
   end
 

@@ -1,5 +1,4 @@
-
-<%= cl_image_tag @animal.photo, height: 500, width: 1280, crop: :fill %>
+<div class="show-img" style="background-image: url(<%= @animal.photo %>);"> </div>
 <div class="wrapper">
   <div class="show-container">
 
@@ -9,5 +8,5 @@
     <h2><strong>Price:</strong><%= @animal.price %></h2>
   </div>
 
-  <%= render "new_booking_form", animal: @animal, booking: @booking %>
+  <%= render "animals/new_booking_form", animal: @animal, booking: @booking %>
 </div>
