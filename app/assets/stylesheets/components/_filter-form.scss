@@ -1,10 +1,19 @@
 .filter-form {
     position: fixed;
-    top: 11%;
-    left: 83%;
-    padding: 6px 50px;
+    bottom: 160px;
+    right: 10px;
+    width: 150px;
+    padding: 6px 30px;
     padding-bottom: 20px;
-
+    background-color: white;
     border-style: solid;
     border-color: #49AF67;
+    p {
+      color: #49AF67;
+      font-weight: bold;
+    }
   }
+
+.animal-list {
+  width: 10px;
+}
