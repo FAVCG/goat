@@ -4,6 +4,10 @@
   <%= f.label :date, "Date:" %>
   <%= f.date_field :date, as: :string, required: true, class: "datepicker form-control mb-3" %>
 
+      <p class='animal-price'>
+        <span class="font-weight-bold">Price:</span><%= @animal.price %>
+      </p>
+
   <%= f.submit   'Confirm', class: "btn btn-primary btn-search-animals"%>
 <% end %>
 </div>

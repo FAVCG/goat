@@ -1,12 +1,35 @@
-<div class="show-img" style="background-image: url(<%= @animal.photo %>);"> </div>
-<div class="wrapper">
-  <div class="show-container">
-
+<div class="animal-picture" style="background-image: url('<%= cl_image_path @animal.photo %>');"></div>
+<div class="container mt-5 p-5 d-flex justify-content-between animal-information-wrapper" style="">
+  <div class="animal-information">
     <h1><%= @animal.name %></h1>
-    <h2><strong>Kind:</strong> <%= @animal.animal_type %></h2>
-    <p><strong>About: </strong><%= @animal.description %></p>
-    <h2><strong>Price:</strong><%= @animal.price %></h2>
+    <span style="background-color: #<%= Random.new.bytes(3).unpack("H*")[0] %>" class="animal-type-tag"><%= @animal.animal_type.upcase %></span>
+    <span style="background-color: #<%= Random.new.bytes(3).unpack("H*")[0] %>" class="animal-type-tag"><%= @animal.animal_type.upcase %></span>
+    <span style="background-color: #<%= Random.new.bytes(3).unpack("H*")[0] %>" class="animal-type-tag"><%= @animal.animal_type.upcase %></span>
+    <span style="background-color: #<%= Random.new.bytes(3).unpack("H*")[0] %>" class="animal-type-tag"><%= @animal.animal_type.upcase %></span>
+    <p class='animal-description'>
+        <%= @animal.description %>
+    </p>
+    <div class='animal-details'>
+      <h2>Details</h2>
+      <div class="animal-features">
+        <ul class='list-inline'>
+          <li class=''>
+            <i class="fas fa-location-arrow"></i>   Villa Crespo
+          </li>
+          <li class=''>
+            <i class="fas fa-clock"></i>   4 hours minimum
+          </li>
+          <li class=''>
+            <i class="fas fa-comments"></i>   <%= rand(100..300) %> Reviews
+          </li>
+          <li class=''>
+            <i class="fas fa-paw"></i>   Friendly
+          </li>
+        </ul>
+      </div>
+    </div>
   </div>
-
+  <div id="new-booking" style="background-color: violet; height: 200px; width: 40%;">
   <%= render "animals/new_booking_form", animal: @animal, booking: @booking %>
+  </div>
 </div>
