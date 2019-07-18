@@ -1,14 +1,18 @@
 .navbar-lewagon {
-  justify-content: space-between;
-  background-color: #49AF67;
-  img {
-    vertical-align: middle;
-  }
+ position: sticky;
+ top: 0;
+ justify-content: space-between;
+ background-color: #49AF67;
+ height: 50px;
+ font-family: 'Montserrat', sans-serif;
+ img {
+  vertical-align: middle;
+}
 }
 
 .navbar-lewagon .navbar-collapse {
   flex-grow: 0;
-   padding: 8px;
+  padding: 8px;
 }
 
 .navbar-lewagon .navbar-brand img {
@@ -16,7 +20,7 @@
 }
 
 .nav-item {
-padding: 10px;
+  padding: 10px;
   a {
     color: #26282A;
   }
