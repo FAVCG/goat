@@ -1,3 +1,4 @@
+
 <div class="animal-picture" style="background-image: url('<%= cl_image_path @animal.photo %>');"></div>
 <div class="container mt-5 p-5 d-flex justify-content-between animal-information-wrapper" style="">
   <div class="animal-information">
@@ -33,5 +34,6 @@
   </div>
   <div id="new-booking" style="background-color: white; height: 200px; width: 350px; padding-top: 20px; padding-left: 30px; padding-right:200px">
   <%= render "animals/new_booking_form", animal: @animal, booking: @booking %>
+
   </div>
 </div>

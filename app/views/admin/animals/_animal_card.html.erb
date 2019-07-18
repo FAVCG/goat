@@ -1,19 +1,25 @@
-<div class="card-trip my-5">
-  <%= cl_image_tag animal.photo, height: 300, width: 400, crop: :fill %>
-  <div class="card-trip-infos">
-    <div>
-      <a href="../animals/<%= animal.id %>"><h2><%= animal.name %></h2>
-
-      <p><%= animal.animal_type.upcase %> | <%= animal.description %></p>
-    </a>
+<div class="animal-card">
+  <%= link_to animal_path(animal) do %>
+  <div class="card-trip">
+    <%= cl_image_tag animal.photo, height: 200, width: 400, crop: :fill %>
+    <div class="card-trip-infos">
+      <div>
+        <h2><%= animal.name %></h2>
+        <p><%= animal.animal_type.upcase %> | <%= animal.description %></p>
+      </div>
+      <h2 class="card-trip-pricing">$ <%= animal.price %> / day</h2>
+      <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-trip-user avatar-bordered" />
     </div>
-    <h2 class="card-trip-pricing">$<%= animal.price %></h2>
-    <img src='https://kitt.lewagon.com/placeholder/users/krokrob' class="card-trip-user avatar-bordered"/>
-  </div>
+
+  <% end %>
   <div class="container mb-1">
     <div class="row">
-    <%= link_to 'Edit card', edit_animal_path(animal), class: "btn btn-primary btn-search-animals" %> <br>
-     <%= link_to "Delete card",  animal, method: :delete, class: "btn btn-primary btn-search-animals"%>
-</div></div>
-</div>
-
+      <div class="col-6">
+    <%= link_to 'Edit card', edit_animal_path(animal) %> <br>
+    </div>
+    <div class="col-6">
+    <%= link_to "Delete card",  animal, method: :delete %>
+    </div>
+    </div>
+  </div>
+</div>  </div>
