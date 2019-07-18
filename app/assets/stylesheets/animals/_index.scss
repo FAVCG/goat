@@ -1,9 +1,4 @@
-.animals-filter {
-  text-align: center;
-  margin: 20px 0px;
-  color: #2C7A5A;
-}
-
-.animals-filter > div {
-  margin-right: 1.25rem;
+.animal-card-description {
+  overflow: hidden;
+  text-overflow: ellipsis;
 }

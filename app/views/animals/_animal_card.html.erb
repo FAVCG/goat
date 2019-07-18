@@ -1,14 +1,15 @@
-<div class="card-trip border border-success rounded-top my-5">
-  <a href="animals/<%= animal.id %>"> <%= cl_image_tag animal.photo, height: 200, width: 400, crop: :fill %></a>
-  <div class="card-trip-infos">
-    <div>
-      <a href="animals/<%= animal.id %>"><h2><%= animal.name %></h2>
-
-      <p><%= animal.animal_type.upcase %> | <%= animal.description %></p>
-    </a>
+<div class="animal-card">
+  <%= link_to animal_path(animal) do %>
+    <div class="card-trip">
+      <%= cl_image_tag animal.photo, height: 200, width: 400, crop: :fill %>
+      <div class="card-trip-infos">
+        <div>
+          <h2><%= animal.name %></h2>
+          <p><%= animal.animal_type.upcase %> | <%= animal.description %></p>
+        </div>
+        <h2 class="card-trip-pricing">$ <%= animal.price %></h2>
+        <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-trip-user avatar-bordered" />
+      </div>
     </div>
-    <h2 class="card-trip-pricing">$<%= animal.price %>/day</h2>
-    <img src='https://kitt.lewagon.com/placeholder/users/krokrob' class="card-trip-user avatar-bordered"/>
-  </div>
+  <% end %>
 </div>
-
