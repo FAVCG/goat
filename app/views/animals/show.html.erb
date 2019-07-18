@@ -1,12 +1,28 @@
 <div class="show-img" style="background-image: url(<%= @animal.photo %>);"> </div>
 <div class="wrapper">
   <div class="show-container">
+    <div class="row">
+      <div class="col-6">
+        <h1><%= @animal.name %></h1>
+      </div>
+      <div class="col-6">
 
-    <h1><%= @animal.name %></h1>
-    <h2><strong>Kind:</strong> <%= @animal.animal_type %></h2>
+        <h2><strong>Kind:</strong> <%= @animal.animal_type %></h2>
+      </div>
+
+    </div>
+    <div class="row">
+      <div class="col-6">
+      </div>
+      <div class="col-6">
+
+        <h2><strong>Price:</strong>$ <%= @animal.price %> / day</h2>
+      </div>
+    </div>
     <p><strong>About: </strong><%= @animal.description %></p>
-    <h2><strong>Price:</strong><%= @animal.price %></h2>
   </div>
 
-  <%= render "animals/new_booking_form", animal: @animal, booking: @booking %>
+  <div class="booking-form">
+    <%= render "animals/new_booking_form", animal: @animal, booking: @booking %>
+  </div>
 </div>

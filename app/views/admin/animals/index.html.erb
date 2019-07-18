@@ -1,14 +1,5 @@
-<form action="animals" class="animals-filter">
-  <% Animal.types.each do |type| %>
-    <div class="form-check form-check-inline">
-      <input class="form-check-input" type="checkbox" id="<%= type %>" name="animal_type[]" value="<%= type %>">
-      <label class="form-check-label" for="<%= type %>"><%= type.upcase %></label>
-    </div>
-  <% end %>
-  <input type="submit" class="btn btn-primary btn-search-animals" value="Search">
-</form>
-
 <div class="container">
+<h1 class="text-center mt-5">My farm</h1>
   <div class="row">
     <% @animals.each do |animal| %>
     <div class="col-4">
@@ -18,30 +9,30 @@
     </div>
     <% end %>
   </div>
-<div class="container mx-5">
-<div class="row">
-<div class="col-6">
-<h2><strong>My Bookings</strong></h2>
+  <div class="container mx-5">
+    <div class="row">
+      <div class="col-6">
+        <h2><strong>My Bookings</strong></h2>
 
-    <% @my_animals_bookings.each do |booking| %>
+        <% @my_animals_bookings.each do |booking| %>
 
-  <%= render "booking-cards", booking: booking %>
-<% end %>
-</div>
+        <%= render "booking-cards", booking: booking %>
+        <% end %>
+      </div>
 
-<div class="col-6">
-<h2><strong>My clients' bookings</strong></h2>
+      <div class="col-6">
+        <h2><strong>My clients' bookings</strong></h2>
 
 
-    <% @others_animals_bookings.each do |booking| %>
+        <% @others_animals_bookings.each do |booking| %>
 
-<div id="client-bookings">
-    <%= render "clients-bookings", booking: booking %>
-</div>
+        <div id="client-bookings">
+          <%= render "clients-bookings", booking: booking %>
+        </div>
 
-<% end %>
-</div>
-</div>
-</div>
+        <% end %>
+      </div>
     </div>
+  </div>
+</div>
 
