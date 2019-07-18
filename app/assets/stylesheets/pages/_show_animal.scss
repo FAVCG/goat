@@ -5,10 +5,13 @@
   border-radius: 4px;
 }
 
-.animal-information h1 {
-  margin-bottom: 20px;
-  font-size: 50px;
-  font-weight: bold;
+.animal-information {
+  width: 65%;
+  h1 {
+    margin-bottom: 20px;
+    font-size: 50px;
+    font-weight: bold;
+  }
 }
 
 .animal-type-tag {
@@ -52,17 +55,15 @@
   }
 }
 
-.new-booking {
-
-
+#new-booking {
   padding: 24px 35px;
   margin-bottom: 50px;
   border: 1px solid #e6e6e6;
-  background-color: $white;
+  background-color: $light;
   width: 400px;
   height: 300px;
   padding-bottom: 50px;
   padding-top: 35px;
-  width: 300px;
+  width: 30%;
   height: 100%;
-  }
+}

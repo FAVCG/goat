@@ -9,15 +9,18 @@
   </div>
 
   <% if booking.confirmed %>
-    <p><%= "" %></p>
+
+    <%= form_with url: "/decline_booking" do |form| %>
+    <%= form.hidden_field :booking_id, value: booking.id %>
+    <%= form.submit "Decline", class: "btn btn-primary btn-search-animals" %>
+    <% end %>
+
   <% else %>
 
     <%= form_with url: "/confirm_booking" do |form| %>
     <%= form.hidden_field :booking_id, value: booking.id %>
     <%= form.submit "Confirm", class: "btn btn-primary btn-search-animals" %>
-    <%= form.submit "Decline", class: "btn btn-primary btn-search-animals" %>
     <% end %>
-
 
   <% end %>
 

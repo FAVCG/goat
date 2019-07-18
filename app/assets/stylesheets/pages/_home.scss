@@ -1,4 +1,10 @@
 // Specific CSS for your home-page
+body {
+  font-family: 'Montserrat', sans-serif;
+  background-color: #FFFAE8;
+}
+
+
 .carousel-item {
   font-family: 'Montserrat', sans-serif;
   img {
@@ -14,8 +20,11 @@
     padding-bottom: 13px;
     font-weight: bolder;
     text-shadow: 2px 1px #1d5840;
+    font-family: 'Montserrat', sans-serif;
+
   }
   h3 {
+    font-family: 'Montserrat', sans-serif;
     font-size: 40px;
     font-weight: bold;
     color: #f4f4f4;
@@ -24,5 +33,37 @@
 }
 .cta-img {
   height: 87vh;
+}
+.explanation {
+  width: 100%;
+  height: 150px;
+  margin: 50px 0;
+  img {
+    object-fit: cover;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin: 20px;
+  }
+  h2 {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    margin-bottom: 10px;
+    font-size: 18px;
+    font-weight: bold;
+  }
+  p, li {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    font-size: 14px;
+    font-style: italic;
+  }
+}
+
+.cta {
+  font-family: 'Montserrat', sans-serif;
+  font-style: bold;
+  font-size: 40px;
+  margin-top: 40px;
 }
 
