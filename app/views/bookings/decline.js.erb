@@ -1,0 +1,5 @@
+var oldBooking = document.getElementById('booking-<%= @booking.id %>');
+oldBooking.outerHTML = "";
+
+var clientBookings = document.getElementById('client-bookings');
+clientBookings.insertAdjacentHTML('beforeend', '<%= j render "admin/animals/clients-bookings.html", booking: @booking %>')
