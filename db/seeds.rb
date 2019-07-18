@@ -38,8 +38,7 @@ User.first(2).each do |user|
    10.times do
      booker = User.last(3).sample
      b = Booking.new(
-        date: Date.today + rand(-20..0).days,
-        location: Faker::Address.state,
+        date: Date.today + rand(-20..0).days
         )
      b.user = booker
      b.animal = a
