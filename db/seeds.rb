@@ -138,8 +138,7 @@ end
  1.times do
    booker = User.all.sample
    b = Booking.new(
-      date: Date.today + rand(-20..0).days,
-      location: Faker::Address.state,
+      date: Date.today + rand(-20..0).days
       )
    b.user = booker
    b.animal = Animal.all.sample
@@ -172,8 +171,7 @@ end
  1.times do
    booker = User.all.sample
    b = Booking.new(
-      date: Date.today + rand(-20..0).days,
-      location: Faker::Address.state,
+      date: Date.today + rand(-20..0).days
       )
    b.user = booker
    b.animal = Animal.all.sample
@@ -206,8 +204,7 @@ end
  1.times do
    booker = User.all.sample
    b = Booking.new(
-      date: Date.today + rand(-20..0).days,
-      location: Faker::Address.state,
+      date: Date.today + rand(-20..0).days
       )
    b.user = booker
    b.animal = Animal.all.sample
@@ -240,8 +237,7 @@ end
  1.times do
    booker = User.all.sample
    b = Booking.new(
-      date: Date.today + rand(-20..0).days,
-      location: Faker::Address.state,
+      date: Date.today + rand(-20..0).days
       )
    b.user = booker
    b.animal = Animal.all.sample
@@ -274,8 +270,7 @@ end
  1.times do
    booker = User.all.sample
    b = Booking.new(
-      date: Date.today + rand(-20..0).days,
-      location: Faker::Address.state,
+      date: Date.today + rand(-20..0).days
       )
    b.user = booker
    b.animal = Animal.all.sample
@@ -308,8 +303,7 @@ end
  1.times do
    booker = User.all.sample
    b = Booking.new(
-      date: Date.today + rand(-20..0).days,
-      location: Faker::Address.state,
+      date: Date.today + rand(-20..0).days
       )
    b.user = booker
    b.animal = Animal.all.sample
@@ -342,8 +336,7 @@ end
  1.times do
    booker = User.all.sample
    b = Booking.new(
-      date: Date.today + rand(-20..0).days,
-      location: Faker::Address.state,
+      date: Date.today + rand(-20..0).days
       )
    b.user = booker
    b.animal = Animal.all.sample
@@ -375,8 +368,7 @@ end
  1.times do
    booker = User.all.sample
    b = Booking.new(
-      date: Date.today + rand(-20..0).days,
-      location: Faker::Address.state,
+      date: Date.today + rand(-20..0).days
       )
    b.user = booker
    b.animal = Animal.all.sample
@@ -409,8 +401,7 @@ end
  1.times do
    booker = User.all.sample
    b = Booking.new(
-      date: Date.today + rand(-20..0).days,
-      location: Faker::Address.state,
+      date: Date.today + rand(-20..0).days
       )
    b.user = booker
    b.animal = Animal.all.sample
@@ -442,8 +433,7 @@ end
  1.times do
    booker = User.all.sample
    b = Booking.new(
-      date: Date.today + rand(-20..0).days,
-      location: Faker::Address.state,
+      date: Date.today + rand(-20..0).days
       )
    b.user = booker
    b.animal = Animal.all.sample
@@ -475,8 +465,7 @@ end
  1.times do
    booker = User.all.sample
    b = Booking.new(
-      date: Date.today + rand(-20..0).days,
-      location: Faker::Address.state,
+      date: Date.today + rand(-20..0).days
       )
    b.user = booker
    b.animal = Animal.all.sample
@@ -508,8 +497,7 @@ end
  1.times do
    booker = User.all.sample
    b = Booking.new(
-      date: Date.today + rand(-20..0).days,
-      location: Faker::Address.state,
+      date: Date.today + rand(-20..0).days
       )
    b.user = booker
    b.animal = Animal.all.sample
@@ -541,8 +529,7 @@ end
  1.times do
    booker = User.all.sample
    b = Booking.new(
-      date: Date.today + rand(-20..0).days,
-      location: Faker::Address.state,
+      date: Date.today + rand(-20..0).days
       )
    b.user = booker
    b.animal = Animal.all.sample
@@ -574,8 +561,7 @@ end
  1.times do
    booker = User.all.sample
    b = Booking.new(
-      date: Date.today + rand(-20..0).days,
-      location: Faker::Address.state,
+      date: Date.today + rand(-20..0).days
       )
    b.user = booker
    b.animal = Animal.all.sample
@@ -607,8 +593,7 @@ end
  1.times do
    booker = User.all.sample
    b = Booking.new(
-      date: Date.today + rand(-20..0).days,
-      location: Faker::Address.state,
+      date: Date.today + rand(-20..0).days
       )
    b.user = booker
    b.animal = Animal.all.sample
@@ -640,8 +625,7 @@ end
  1.times do
    booker = User.all.sample
    b = Booking.new(
-      date: Date.today + rand(-20..0).days,
-      location: Faker::Address.state,
+      date: Date.today + rand(-20..0).days
       )
    b.user = booker
    b.animal = Animal.all.sample
@@ -673,8 +657,7 @@ end
  1.times do
    booker = User.all.sample
    b = Booking.new(
-      date: Date.today + rand(-20..0).days,
-      location: Faker::Address.state,
+      date: Date.today + rand(-20..0).days
       )
    b.user = booker
    b.animal = Animal.all.sample
@@ -706,8 +689,7 @@ end
  1.times do
    booker = User.all.sample
    b = Booking.new(
-      date: Date.today + rand(-20..0).days,
-      location: Faker::Address.state,
+      date: Date.today + rand(-20..0).days
       )
    b.user = booker
    b.animal = Animal.all.sample
@@ -739,8 +721,7 @@ end
  1.times do
    booker = User.all.sample
    b = Booking.new(
-      date: Date.today + rand(-20..0).days,
-      location: Faker::Address.state,
+      date: Date.today + rand(-20..0).days
       )
    b.user = booker
    b.animal = Animal.all.sample
@@ -772,8 +753,7 @@ end
  1.times do
    booker = User.all.sample
    b = Booking.new(
-      date: Date.today + rand(-20..0).days,
-      location: Faker::Address.state,
+      date: Date.today + rand(-20..0).days
       )
    b.user = booker
    b.animal = Animal.all.sample
@@ -808,8 +788,7 @@ end
  1.times do
    booker = User.all.sample
    b = Booking.new(
-      date: Date.today + rand(-20..0).days,
-      location: Faker::Address.state,
+      date: Date.today + rand(-20..0).days
       )
    b.user = booker
    b.animal = Animal.all.sample
@@ -844,8 +823,7 @@ end
  1.times do
    booker = User.all.sample
    b = Booking.new(
-      date: Date.today + rand(-20..0).days,
-      location: Faker::Address.state,
+      date: Date.today + rand(-20..0).days
       )
    b.user = booker
    b.animal = Animal.all.sample
@@ -877,8 +855,7 @@ end
  1.times do
    booker = User.all.sample
    b = Booking.new(
-      date: Date.today + rand(-20..0).days,
-      location: Faker::Address.state,
+      date: Date.today + rand(-20..0).days
       )
    b.user = booker
    b.animal = Animal.all.sample
@@ -910,8 +887,7 @@ end
  1.times do
    booker = User.all.sample
    b = Booking.new(
-      date: Date.today + rand(-20..0).days,
-      location: Faker::Address.state,
+      date: Date.today + rand(-20..0).days
       )
    b.user = booker
    b.animal = Animal.all.sample
