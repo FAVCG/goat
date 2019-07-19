@@ -38,3 +38,13 @@
   border-radius: 50%;
 }
 
+
+ .navbar-light .navbar-nav .active > .nav-link, .navbar-light .navbar-nav .nav-link.show, .navbar-light .navbar-nav .nav-link.active {
+ color: #f4f4f4;
+ font-weight: bolder;
+}
+
+.navbar-light .navbar-nav .nav-link {
+  color: #f4f4f4;
+ font-weight: bolder;
+}
