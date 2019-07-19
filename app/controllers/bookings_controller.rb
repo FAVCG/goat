@@ -12,7 +12,7 @@ class BookingsController  < ApplicationController
     @booking = Booking.new(booking_params)
     authorize @booking
     @booking.animal = @animal
-    @booking.user = current_user
+    @booking.user = current_user if @animal.user != current_user
     if @booking.save
       redirect_to @booking
     else

@@ -31,10 +31,23 @@
       </div>
     </div>
   </div>
-  <div id="new-booking">
-    <%= render "animals/new_booking_form", animal: @animal, booking: @booking %>
 
-  </div>
+  <% if @animal.user == current_user && !@animal.bookings.empty? %>
+  <div>
+
+
+  <h2><strong>Next bookings for <%= @animal.name %></strong></h2>
+
+
+  <% @animal.bookings.each do |booking| %>
+  <ul>
+    <li><%= booking.user.email %> For <%= booking.created_at.strftime("%b %e, %l:%M %p") %></li>
+  </ul>
+
+
+  <% end %>
+  <% end %>
+    </div>
 </div>
 
 <div class="container other-animals-wrapper p-5">
@@ -50,3 +63,4 @@
     </div>
   </div>
 </div>
+
