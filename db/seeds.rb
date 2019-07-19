@@ -184,8 +184,6 @@ names = ["Ace",
 b = ["Dog", "Rabbit", "Cow", "Chicken", "Horse", "Pig", "Goat", "Cat", "Duck", "Donkey", "Ferret", "Monkeys"]
 
 
-
-
 1.times do
  a = Animal.create!(
   animal_type: 'Dog',
@@ -691,13 +689,13 @@ end
  a.save
 end
 
-10.times do
+15.times do
   b = Booking.new(
    date: Date.today + (-20..0).to_a.sample.days,
    user: User.all.sample,
    animal: Animal.all.sample
    )
-  b.save!
+  b.save! if b.animal.user != b.user
 end
 
    # 1.times do
