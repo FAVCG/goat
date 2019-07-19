@@ -4,17 +4,17 @@
     <h1><%= @animal.name %></h1>
     <span style="background-color: #<%= Random.new.bytes(3).unpack("H*")[0] %>" class="animal-type-tag"><%= @animal.animal_type.upcase %></span>
     <p class='animal-description'>
-        <%= @animal.description %>
+      <%= @animal.description %>
     </p>
     <div class='animal-details'>
       <h2>Details</h2>
       <div class="animal-features">
         <ul class='list-inline'>
           <li class=''>
-            <i class="fas fa-location-arrow"></i>   Villa Crespo
+            <i class="fas fa-location-arrow"></i> <%= @animal.location %>
           </li>
           <li class=''>
-            <i class="fas fa-clock"></i>   1 hours minimum
+            <i class="fas fa-clock"></i>   <%= rand(1..12) %> hours minimum
           </li>
           <li class=''>
             <i class="fas fa-comments"></i>   <%= rand(100..300) %> Reviews
@@ -24,14 +24,29 @@
           </li>
         </ul>
         <h2>Price</h2>
-         <p class='animal-price'>
-            <i class="fas fa-wallet"></i>
-        <span class="font-weight-bold"></span><%= @animal.price %>
-      </p>
+        <p class='animal-price'>
+          <i class="fas fa-wallet"></i>
+          <span class="font-weight-bold"></span><%= @animal.price %>
+        </p>
       </div>
     </div>
   </div>
   <div id="new-booking">
     <%= render "animals/new_booking_form", animal: @animal, booking: @booking %>
+
+  </div>
+</div>
+
+<div class="container other-animals-wrapper p-5">
+  <h2>Similar animals to your choice...</h2>
+  <p class="animal-renting-statement"><i class="fas fa-surprise" style="color: #<%= Random.new.bytes(3).unpack("H*")[0] %>"></i><span><%= rand(30..90) %>  of these animals have been rented in the last <%= rand(10..20) %> hours</span></p>
+  <div class="other-animals-container">
+    <div class="other-animals">
+      <% @other_animals.each do |animal| %>
+      <div class="animal-card-wrapper">
+        <%= render "animals/animal_card", animal: animal %>
+      </div>
+      <% end %>
+    </div>
   </div>
 </div>

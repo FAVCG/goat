@@ -26,8 +26,7 @@
     @animal = Animal.new
     authorize @animal
   end
-  def show
-  end
+
   def create
     @animal = Animal.new(animal_params)
         authorize @animal
@@ -41,8 +40,10 @@
   end
 
   def show
+    @other_animals = policy_scope(Animal)
     @booking = Booking.new
   end
+
   def destroy
     @animal.destroy
     redirect_to admin_animals_path, notice: 'Animal was successfully destroyed.'
@@ -59,11 +60,13 @@
       render :edit
     end
   end
+
   private
 
   def animal_params
     params.require(:animal).permit(:name, :animal_type, :description, :price, :photo, :location)
   end
+
   def set_animal
     @animal = Animal.find(params[:id])
     authorize @animal
