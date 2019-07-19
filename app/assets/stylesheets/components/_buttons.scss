@@ -5,8 +5,10 @@
   font-family: 'Montserrat', sans-serif;
   background-color: #49AF67;
   border: 1px solid #49AF67;
-
-}
+  margin-bottom: 10px;
+  color: white;
+  border-radius: 6px;
+  }
 
 .btn-search-animals:hover {
   background-color: #2C7A5A;
@@ -26,4 +28,11 @@
 .btn-search-therapy:hover {
   background-color: #2C7A5A;
   border-color: #2C7A5A;
+}
+
+
+.form-back {
+  a{
+    color: white;
+  }
 }
