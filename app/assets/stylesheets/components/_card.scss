@@ -46,8 +46,17 @@
   width: 40px;
 }
 .confirm-btn {
-  position: absolute;
-  position: relative;
-  top: 40px;
-  left: 40px;
+    align-items: left;
+    display: flex;
+    justify-content: flex-end;
+        margin-bottom: -100px;
+
+
+}
+
+
+.res {
+  color: black;
+  font-size: 15px;
+  text-decoration: underline;
 }
