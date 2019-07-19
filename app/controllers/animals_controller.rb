@@ -68,7 +68,7 @@
   private
 
   def animal_params
-    params.require(:animal).permit(:name, :animal_type, :description, :price, :photo, :location)
+    params.require(:animal).permit(:name, :animal_type, :description, :price, :photo, :location, :address)
   end
 
   def set_animal

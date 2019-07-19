@@ -1,29 +1,21 @@
-<div class="container">
-
-
-<div class= "portrait">
-<div class= "_conf text-center my-5"> <strong><h1>Request sent</h1></strong></div>
+<div class="show-top">
+  <img src="<%= @booking.animal.photo %>" class="card-img" alt="...">
 </div>
-<div class="card mb-3" style="max-width:500px, max-height:500px;">
-  <div class="row no-gutters">
-    <div class="col-md-4">
-      <img src="<%= @booking.animal.photo %>" class="card-img" alt="...">
-      <div style="background-image: url('https://ichef.bbci.co.uk/news/660/cpsprodpb/B875/production/_102512274_gettyimages-518360318.jpg')">
-      </div>
-    </div>
-    <div class="col-md-8">
-      <div class="card-body">
-        <h5 class="card-title"><strong>Date: <%= @booking.date %></strong></h5>
-        <p class="card-text">Location: <%= @booking.animal.location %></p>
-        <p class="card-text">Request number: <strong> <%= (Faker::Alphanumeric.alpha 10).upcase %></strong></p>
+<div class="title">
+<strong><h1>Request sent</h1></strong>
+</div>
+<div class="show-container">
+  <div class="map-img">
+    <img src='https://api.mapbox.com/styles/v1/mapbox/streets-v11/static/pin-l(<%= @booking.animal.longitude %>,<%= @booking.animal.latitude %>)/<%= @booking.animal.longitude %>,<%= @booking.animal.latitude %>,7,0.00,0.00/200x200@2x?access_token=<%= ENV['MAPBOX_API_KEY'] %>' alt='Restaurant location'  >
+  </div>
+  <div class= "details">
 
-        <p class="card-text"><small class="text-muted">Confirmation Pending...</small></p>
-      </div>
-    </div>
+    <h5 class="card-title"><strong>Date: <%= @booking.date %></strong></h5>
+    <p class="card-text">Location: <%= @booking.animal.location %></p>
+    <p class="card-text">Request number: <strong> <%= (Faker::Alphanumeric.alpha 10).upcase %></strong></p>
+    <p class="card-text"><small class="text-muted">Confirmation Pending...</small></p>
+    <h2 style= "text-align: center;">Enjoy your time!!</h2>
   </div>
 </div>
 
 
-
-<h2 style= "text-align: center;">Enjoy your time!!</h2>
-</div>
