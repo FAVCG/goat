@@ -1,5 +1,8 @@
   class AnimalsController < ApplicationController
   before_action :set_animal, only: [:show, :edit, :update, :destroy]
+  before_action :store_user_location!, if: :storable_location?
+
+  skip_before_action :authenticate_user!, only: [:home, :index, :show]
   def index
     search = params[:animal_type]
     user_id = params[:user_id]
@@ -67,5 +70,13 @@
   def set_animal
     @animal = Animal.find(params[:id])
     authorize @animal
+  end
+
+  def storable_location?
+    request.get? && is_navigational_format? && !devise_controller? && !request.xhr?
+  end
+
+  def store_user_location!
+    store_location_for(:user, request.fullpath)
   end
 end
