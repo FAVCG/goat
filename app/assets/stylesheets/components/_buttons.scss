@@ -5,8 +5,10 @@
   font-family: 'Montserrat', sans-serif;
   background-color: #49AF67;
   border: 1px solid #49AF67;
-
-}
+  margin-bottom: 10px;
+  color: white;
+  border-radius: 6px;
+  }
 
 .btn-search-animals:hover {
   background-color: #2C7A5A;
@@ -27,10 +29,18 @@
   background-color: #2C7A5A;
   border-color: #2C7A5A;
 }
+
 .book-btn {
   color: white;
   font-weight: bolder;
   font-family: 'Montserrat', sans-serif;
   margin-bottom: 2px;
   margin-left: 8px;
+
+
+.form-back {
+  a{
+    color: white;
+  }
+
 }

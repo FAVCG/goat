@@ -67,3 +67,18 @@
   width: 30%;
   height: 100%;
 }
+
+.animal-renting-statement {
+  color: rgba(0,0,0,0.6);
+  font-size: 20px;
+  font-style: italic;
+  font-weight: lighter;
+  margin-top: 20px;
+  margin-bottom: 0px;
+  display: flex;
+  align-items: center;
+  i {
+    padding-right: 10px;
+    font-size: 50px;
+  }
+}
