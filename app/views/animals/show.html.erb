@@ -2,6 +2,7 @@
 <div class="container mt-5 p-5 d-flex justify-content-between animal-information-wrapper" style="">
   <div class="animal-information">
     <h1><%= @animal.name %></h1>
+    <p> Owner <strong><%= @animal.user.email.split("@").first.capitalize %></strong></p>
     <span style="background-color: #<%= Random.new.bytes(3).unpack("H*")[0] %>" class="animal-type-tag"><%= @animal.animal_type.upcase %></span>
     <p class='animal-description'>
       <%= @animal.description %>
@@ -14,7 +15,7 @@
             <i class="fas fa-location-arrow"></i> <%= @animal.location %>
           </li>
           <li class=''>
-            <i class="fas fa-clock"></i>   <%= rand(1..12) %> hours minimum
+            <i class="fas fa-clock"></i>   <%= rand(2..12) %> Days minimum
           </li>
           <li class=''>
             <i class="fas fa-comments"></i>   <%= rand(100..300) %> Reviews
@@ -26,15 +27,28 @@
         <h2>Price</h2>
         <p class='animal-price'>
           <i class="fas fa-wallet"></i>
-          <span class="font-weight-bold"></span><%= @animal.price %>
+          <span class="font-weight-bold"></span> $ <%= @animal.price %> / day
         </p>
       </div>
     </div>
   </div>
-  <div id="new-booking">
-    <%= render "animals/new_booking_form", animal: @animal, booking: @booking %>
 
-  </div>
+  <% if @animal.user == current_user && !@animal.bookings.empty? %>
+  <div>
+
+
+  <h2><strong>Next bookings for <%= @animal.name %></strong></h2>
+
+
+  <% @animal.bookings.each do |booking| %>
+  <ul>
+    <li><%= booking.user.email %> For <%= booking.created_at.strftime("%b %e, %l:%M %p") %></li>
+  </ul>
+
+
+  <% end %>
+  <% end %>
+    </div>
 </div>
 
 <div class="container other-animals-wrapper p-5">
@@ -50,5 +64,4 @@
     </div>
   </div>
 </div>
-
-
+ 

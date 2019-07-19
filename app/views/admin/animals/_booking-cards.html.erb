@@ -7,8 +7,8 @@
       <span style="background-color: #<%= Random.new.bytes(3).unpack("H*")[0] %>" class="animal-type-tag"><%= booking.animal.animal_type.upcase %></span>
     </div>
     <p>Animal's owner email: <%= booking.user.email %></p>
-    <p>Booking confirmation: <%= booking.confirmed == true ? "Confirmed" : "Not confirmed" %></p>
     <p>Booked on: <%= booking.created_at.strftime("%A, %b %d") %></p>
+    <p class="confirmed_or_not"><strong>Booking confirmation: <span class="res"><%= booking.confirmed ? "Confirmed" : "Not confirmed" %></span></strong></p>
   </div>
 </div>
 

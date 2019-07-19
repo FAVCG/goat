@@ -45,6 +45,7 @@
   def show
     @other_animals = policy_scope(Animal)
     @booking = Booking.new
+    @others_animals_bookings = current_user.bookings
   end
 
   def destroy

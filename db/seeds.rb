@@ -111,12 +111,76 @@ names = ["Ace",
  Animal.destroy_all
  User.destroy_all
 
- users = %w(lux@mail.com sole@mail.com faby@mail.com sam@mail.com sebas@mail.com).each do |email|
+
   User.create!(
-    email: email,
-    password: 123456
+    email: 'lux@mail.com',
+    password: 123456,
+    avatar: 'https://avatars1.githubusercontent.com/u/46462316?v=4'
     )
-end
+
+  User.create!(
+    email: 'alberta@mail.com',
+    password: 123456,
+    avatar: 'https://avatars0.githubusercontent.com/u/50481949?v=4'
+    )
+
+  User.create!(
+    email: 'fer@mail.com',
+    password: 123456,
+    avatar: 'https://avatars0.githubusercontent.com/u/47560671?v=4'
+    )
+
+  User.create!(
+    email: 'orlando@mail.com',
+    password: 123456,
+    avatar: 'https://avatars2.githubusercontent.com/u/23037260?v=4'
+    )
+
+  User.create!(
+    email: 'yuyu@mail.com',
+    password: 123456,
+    avatar: 'https://avatars1.githubusercontent.com/u/49326447?v=4'
+    )
+
+  User.create!(
+    email: 'sam@mail.com',
+    password: 123456,
+    avatar: 'https://avatars3.githubusercontent.com/u/27783841?v=4'
+    )
+
+  User.create!(
+    email: 'leo@mail.com',
+    password: 123456,
+    avatar: 'https://avatars1.githubusercontent.com/u/39697541?v=4'
+    )
+
+  User.create!(
+    email: 'faby@mail.com',
+    password: 123456,
+    avatar: 'https://avatars2.githubusercontent.com/u/50439580?v=4'
+    )
+  User.create!(
+    email: 'sole@mail.com',
+    password: 123456,
+    avatar: 'https://avatars0.githubusercontent.com/u/48864600?v=4'
+    )
+  User.create!(
+    email: 'pin@mail.com',
+    password: 123456,
+    avatar: 'https://avatars1.githubusercontent.com/u/37698593?v=4'
+    )
+  User.create!(
+    email: 'lisa@mail.com',
+    password: 123456,
+    avatar: 'https://avatars1.githubusercontent.com/u/50211536?v=4'
+    )
+  User.create!(
+    email: 'sebas@mail.com',
+    password: 123456,
+    avatar: 'https://avatars0.githubusercontent.com/u/18401014?s=460&v=4'
+    )
+
+
 b = ["Dog", "Rabbit", "Cow", "Chicken", "Horse", "Pig", "Goat", "Cat", "Duck", "Donkey", "Ferret", "Monkeys"]
 
 
@@ -136,6 +200,19 @@ b = ["Dog", "Rabbit", "Cow", "Chicken", "Horse", "Pig", "Goat", "Cat", "Duck", "
  a.save
 end
 
+1.times do
+ a = Animal.create!(
+  animal_type: 'Dog',
+  name: names.sample,
+  description: Faker::Lorem.sentence(rand(100..200)),
+  price: rand(10..1000),
+  location: Faker::Address.state,
+  user: User.all.sample
+  )
+ a.remote_photo_url = 'https://www.littlethings.com/app/uploads/2017/05/cute-dog-names-1200.jpg'
+ a.save
+end
+
 
 
 
@@ -150,6 +227,18 @@ end
   user: User.all.sample
   )
  a.remote_photo_url = 'http://fallinpets.com/wp-content/uploads/2017/11/dogs-cute-dog-800x445.jpg'
+ a.save
+end
+1.times do
+ a = Animal.create!(
+  animal_type: 'Dog',
+  name: names.sample,
+  description: Faker::Lorem.sentence(rand(100..200)),
+  price: rand(10..1000),
+  location: Faker::Address.state,
+  user: User.all.sample
+  )
+ a.remote_photo_url = 'https://files.brightside.me/files/news/part_66/660860/8264060-A-tiny-puppy-Striking-a-tiny-puppy-pose-1544190301-728-16941a41db-1544515890.jpg'
  a.save
 end
 
@@ -167,6 +256,32 @@ end
   user: User.all.sample
   )
  a.remote_photo_url = 'https://i.ytimg.com/vi/bfN60awmfYk/maxresdefault.jpg'
+ a.save
+end
+1.times do
+ a = Animal.create!(
+  animal_type: 'Rabbit',
+  name: names.sample,
+  description: Faker::Lorem.sentence(rand(100..200)),
+  price: rand(10..1000),
+  location: Faker::Address.state,
+  user: User.all.sample
+  )
+ a.remote_photo_url = 'https://media.mnn.com/assets/images/2017/04/lop-earred-rabbit.jpg.653x0_q80_crop-smart.jpg'
+ a.save
+end
+
+
+1.times do
+ a = Animal.create!(
+  animal_type: 'Rabbit',
+  name: names.sample,
+  description: Faker::Lorem.sentence(rand(100..200)),
+  price: rand(10..1000),
+  location: Faker::Address.state,
+  user: User.all.sample
+  )
+ a.remote_photo_url = 'https://i.ytimg.com/vi/Fv5MZFWn7lE/maxresdefault.jpg'
  a.save
 end
 
@@ -209,6 +324,51 @@ end
 
 1.times do
  a = Animal.create!(
+  animal_type: 'Pig',
+  name: names.sample,
+  description: Faker::Lorem.sentence(rand(100..200)),
+  price: rand(10..1000),
+  location: Faker::Address.state,
+  user: User.all.sample
+  )
+ a.remote_photo_url = 'https://i.imgur.com/Yp47kNU.jpg'
+ a.save
+end
+
+
+
+
+1.times do
+ a = Animal.create!(
+  animal_type: 'Pig',
+  name: names.sample,
+  description: Faker::Lorem.sentence(rand(100..200)),
+  price: rand(10..1000),
+  location: Faker::Address.state,
+  user: User.all.sample
+  )
+ a.remote_photo_url = 'http://i.imgur.com/4Zt1HHQ.jpg'
+ a.save
+end
+
+
+
+
+1.times do
+ a = Animal.create!(
+  animal_type: 'Cow',
+  name: names.sample,
+  description: Faker::Lorem.sentence(rand(100..200)),
+  price: rand(10..1000),
+  location: Faker::Address.state,
+  user: User.all.sample
+  )
+ a.remote_photo_url = 'https://parade.com/wp-content/uploads/2018/01/cute-cow-FTR.jpg'
+ a.save
+end
+
+1.times do
+ a = Animal.create!(
   animal_type: 'Cow',
   name: names.sample,
   description: Faker::Lorem.sentence(rand(100..200)),
@@ -235,6 +395,19 @@ end
   user: User.all.sample
   )
  a.remote_photo_url = 'https://i.pinimg.com/originals/ca/81/0d/ca810d5550d09379a100e4e645826da1.jpg'
+ a.save
+end
+
+1.times do
+ a = Animal.create!(
+  animal_type: 'Chicken',
+  name: names.sample,
+  description: Faker::Lorem.sentence(rand(100..200)),
+  price: rand(10..1000),
+  location: Faker::Address.state,
+  user: User.all.sample
+  )
+ a.remote_photo_url = 'https://www.mypetsname.com/wp-content/uploads/2019/04/Cute-Chicken-Names.jpg'
  a.save
 end
 
