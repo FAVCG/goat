@@ -65,3 +65,31 @@
   height: 55px;
   overflow: hidden;
 }
+
+.animal-card-wrapper {
+  width: 40%;
+  margin-right: 30px;
+}
+
+.other-animals {
+  display: flex;
+  overflow: scroll;
+}
+
+.other-animals-wrapper {
+  margin-top: 40px !important;
+  background-color: white;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  h2 {
+    margin-bottom: 0px;
+    font-size: 30px;
+    font-weight: bold;
+  }
+}
+
+.other-animals-container {
+  overflow: hidden;
+}
+
+
