@@ -1,11 +1,14 @@
 <div class="card-product">
   <img src=<%= booking.animal.photo %> />
   <div class="card-product-infos">
-    <h2>Booked animal: <%= booking.animal.name %></h2>
-    <p>Booked on: <%= booking.created_at %></p>
-    <p>Booking date: <%= booking.date %></p>
+    <h2 class="animal-name"><i class="fas fa-paw" style="color: #<%= Random.new.bytes(3).unpack("H*")[0] %>"></i><span><%= booking.animal.name %></span></h2>
+    <div>
+      <span class="animal-type-tag animal-date">Date: <%= booking.date.strftime("%A, %b %d") %></span>
+      <span style="background-color: #<%= Random.new.bytes(3).unpack("H*")[0] %>" class="animal-type-tag"><%= booking.animal.animal_type.upcase %></span>
+    </div>
     <p>Animal's owner email: <%= booking.user.email %></p>
     <p>Booking confirmation: <%= booking.confirmed == true ? "Confirmed" : "Not confirmed" %></p>
+    <p>Booked on: <%= booking.created_at.strftime("%A, %b %d") %></p>
   </div>
 </div>
 

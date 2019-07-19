@@ -1,10 +1,5 @@
 class BookingsController  < ApplicationController
 
-  def new
-    @booking = Booking.new
-    authorize @booking
-
-  end
 
   def show
     @booking = Booking.find(params[:id])
@@ -44,6 +39,11 @@ class BookingsController  < ApplicationController
       msg = { :status => "ok" }
       format.js
     end
+  end
+
+  def destroy
+    @booking = Booking.find(params[:booking_id])
+    @booking.destroy
   end
 
   private

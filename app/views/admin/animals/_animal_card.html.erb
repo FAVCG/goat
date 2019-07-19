@@ -4,8 +4,8 @@
     <%= cl_image_tag animal.photo, height: 200, width: 400, crop: :fill %>
     <div class="card-trip-infos">
       <div>
-        <h2><%= animal.name %></h2>
-        <p><%= animal.animal_type.upcase %> | <%= animal.description %></p>
+        <h2 class="animal-name"><i class="fas fa-paw" style="color: #<%= Random.new.bytes(3).unpack("H*")[0] %>"></i><span><%= animal.name %></span></h2>
+      <span style="background-color: #<%= Random.new.bytes(3).unpack("H*")[0] %>" class="animal-type-tag"><%= animal.animal_type.upcase %></span>
       </div>
       <h2 class="card-trip-pricing">$ <%= animal.price %> / day</h2>
       <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-trip-user avatar-bordered" />
