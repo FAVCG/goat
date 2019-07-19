@@ -14,8 +14,7 @@
       <div class="col-6">
         <h2><strong>My Bookings</strong></h2>
 
-        <% @my_animals_bookings.each do |booking| %>
-
+        <% current_user.bookings.each do |booking| %>
         <%= render "booking-cards", booking: booking %>
         <% end %>
       </div>
@@ -24,7 +23,7 @@
         <h2><strong>My clients' bookings</strong></h2>
 
 
-        <% @others_animals_bookings.each do |booking| %>
+        <% current_user.others_bookings.each do |booking| %>
 
         <div id="client-bookings">
           <%= render "clients-bookings", booking: booking %>

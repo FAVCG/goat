@@ -33,22 +33,18 @@
     </div>
   </div>
 
-  <% if @animal.user == current_user && !@animal.bookings.empty? %>
+  <% if @animal.user == current_user %>
+    <% if !@animal.bookings.empty? %>
+      <h2><strong>Next bookings for <%= @animal.name %></strong></h2>
 
-
-
-
-  <h2><strong>Next bookings for <%= @animal.name %></strong></h2>
-
-  <% @animal.bookings.each do |booking| %>
-  <ul>
-    <li><%= booking.animal.user.email %> For <%= booking.created_at.strftime("%b %e, %l:%M %p") %></li>
-  </ul>
-
-
-
-  <% end %>  <% else %>
-  <%= render 'new_booking_form', animal: @animal, booking: @booking %>
+      <% @animal.bookings.each do |booking| %>
+        <ul>
+          <li><%= booking.animal.user.email %> For <%= booking.created_at.strftime("%b %e, %l:%M %p") %></li>
+        </ul>
+      <% end %>
+    <% end %>
+  <% else %>
+    <%= render 'animals/new_booking_form', animal: @animal, booking: @booking %>
   <% end %>
 
   <div>
