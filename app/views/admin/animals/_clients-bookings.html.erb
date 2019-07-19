@@ -2,7 +2,7 @@
   <img src=<%= booking.animal.photo %> />
   <div class="card-text card-product-infos">
     <div>
-      <h2 class="animal-name"><i class="fas fa-paw" style="color: #<%= Random.new.bytes(3).unpack("H*")[0] %>"></i><span><%= booking.animal.name %></span></h2>
+    <div class="d-inline"> <h2 class="animal-name"><i class="fas fa-paw" style="color: #<%= Random.new.bytes(3).unpack("H*")[0] %>"></i><span><%= booking.animal.name %></span><p> Owner <strong><%= booking.animal.user.email.split("@").first.capitalize %></strong></p></h2></div>
       <div>
         <span class="animal-type-tag animal-date">Date: <%= booking.date.strftime("%A, %b %d") %></span>
         <span style="background-color: #<%= Random.new.bytes(3).unpack("H*")[0] %>" class="animal-type-tag"><%= booking.animal.animal_type.upcase %></span>
