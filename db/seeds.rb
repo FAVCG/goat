@@ -193,7 +193,7 @@ b = ["Dog", "Rabbit", "Cow", "Chicken", "Horse", "Pig", "Goat", "Cat", "Duck", "
   description: Faker::Lorem.sentence(rand(100..200)),
   price: rand(10..1000),
   location: Faker::Address.state,
-  address: "16 Villa Gaudelet, Paris",
+  address: Faker::Address.street_address,
   user: User.all.sample
   )
  a.remote_photo_url = 'https://www.thelabradorsite.com/wp-content/uploads/2017/11/cute.jpg'
@@ -207,6 +207,7 @@ end
   description: Faker::Lorem.sentence(rand(100..200)),
   price: rand(10..1000),
   location: Faker::Address.state,
+  address: Faker::Address.street_address,
   user: User.all.sample
   )
  a.remote_photo_url = 'https://www.littlethings.com/app/uploads/2017/05/cute-dog-names-1200.jpg'
@@ -223,7 +224,7 @@ end
   description: Faker::Lorem.sentence(rand(100..200)),
   price: rand(10..1000),
   location: Faker::Address.state,
-  address: "16 Villa Gaudelet, Paris",
+  address: Faker::Address.street_address,
   user: User.all.sample
   )
  a.remote_photo_url = 'http://fallinpets.com/wp-content/uploads/2017/11/dogs-cute-dog-800x445.jpg'
@@ -252,7 +253,7 @@ end
   description: Faker::Lorem.sentence(rand(100..200)),
   price: rand(10..1000),
   location: Faker::Address.state,
-  address: "16 Villa Gaudelet, Paris",
+  address: Faker::Address.street_address,
   user: User.all.sample
   )
  a.remote_photo_url = 'https://i.ytimg.com/vi/bfN60awmfYk/maxresdefault.jpg'
@@ -295,7 +296,7 @@ end
   description: Faker::Lorem.sentence(rand(100..200)),
   price: rand(10..1000),
   location: Faker::Address.state,
-  address: "16 Villa Gaudelet, Paris",
+  address: Faker::Address.street_address,
   user: User.all.sample
   )
  a.remote_photo_url = 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSJPQAm7JXgGUou-JZm4l-aEegMJAIykRb8THNr_m8lYSbMiG9TAA'
@@ -312,7 +313,7 @@ end
   description: Faker::Lorem.sentence(rand(100..200)),
   price: rand(10..1000),
   location: Faker::Address.state,
-  address: "16 Villa Gaudelet, Paris",
+  address: Faker::Address.street_address,
   user: User.all.sample
   )
  a.remote_photo_url = 'https://blog.humanesociety.org/wp-content/uploads/2018/11/PIG-ISTOCK-522732412_451435-1220x815.jpg'
@@ -374,7 +375,7 @@ end
   description: Faker::Lorem.sentence(rand(100..200)),
   price: rand(10..1000),
   location: Faker::Address.state,
-  address: "16 Villa Gaudelet, Paris",
+  address: Faker::Address.street_address,
   user: User.all.sample
   )
  a.remote_photo_url = 'http://imgur.com/YSrCU.jpg'
@@ -391,7 +392,7 @@ end
   description: Faker::Lorem.sentence(rand(100..200)),
   price: rand(10..1000),
   location: Faker::Address.state,
-  address: "16 Villa Gaudelet, Paris",
+  address: Faker::Address.street_address,
   user: User.all.sample
   )
  a.remote_photo_url = 'https://i.pinimg.com/originals/ca/81/0d/ca810d5550d09379a100e4e645826da1.jpg'
@@ -420,7 +421,7 @@ end
   description: Faker::Lorem.sentence(rand(100..200)),
   price: rand(10..1000),
   location: Faker::Address.state,
-  address: "16 Villa Gaudelet, Paris",
+  address: Faker::Address.street_address,
   user: User.all.sample
   )
  a.remote_photo_url = 'http://wallpapers.sanctify.in/file/123/600x338/16:9/chick-hd-wallpaper_1789129887.jpg'
@@ -437,7 +438,7 @@ end
   description: Faker::Lorem.sentence(rand(100..200)),
   price: rand(10..1000),
   location: Faker::Address.state,
-  address: "16 Villa Gaudelet, Paris",
+  address: Faker::Address.street_address,
   user: User.all.sample
   )
  a.remote_photo_url = 'https://res.cloudinary.com/teepublic/image/private/s--9wA-BGhK--/t_Preview/b_rgb:ffffff,c_limit,f_jpg,h_630,q_90,w_630/v1510211727/production/designs/2038717_1.jpg'
@@ -453,7 +454,7 @@ end
   description: Faker::Lorem.sentence(rand(100..200)),
   price: rand(10..1000),
   location: Faker::Address.state,
-  address: "16 Villa Gaudelet, Paris",
+  address: Faker::Address.street_address,
   user: User.all.sample
   )
  a.remote_photo_url = 'https://cache.desktopnexus.com/thumbseg/2041/2041370-bigthumbnail.jpg'
@@ -469,7 +470,7 @@ end
   description: Faker::Lorem.sentence(rand(100..200)),
   price: rand(10..1000),
   location: Faker::Address.state,
-  address: "16 Villa Gaudelet, Paris",
+  address: Faker::Address.street_address,
   user: User.all.sample
   )
  a.remote_photo_url = 'http://cde.peru21.pe/ima/0/0/3/1/7/317995.jpg'
@@ -485,7 +486,7 @@ end
   description: Faker::Lorem.sentence(rand(100..200)),
   price: rand(10..1000),
   location: Faker::Address.state,
-  address: "16 Villa Gaudelet, Paris",
+  address: Faker::Address.street_address,
   user: User.all.sample
   )
  a.remote_photo_url = 'https://www.comlib.org/wordpress/wp-content/uploads/2017/01/cute-pig.jpg'
@@ -501,7 +502,7 @@ end
   description: Faker::Lorem.sentence(rand(100..200)),
   price: rand(10..1000),
   location: Faker::Address.state,
-  address: "16 Villa Gaudelet, Paris",
+  address: Faker::Address.street_address,
   user: User.all.sample
   )
  a.remote_photo_url = 'https://i.ytimg.com/vi/f_2FQ3EgQbM/maxresdefault.jpg'
@@ -517,7 +518,7 @@ end
   description: Faker::Lorem.sentence(rand(100..200)),
   price: rand(10..1000),
   location: Faker::Address.state,
-  address: "16 Villa Gaudelet, Paris",
+  address: Faker::Address.street_address,
   user: User.all.sample
   )
  a.remote_photo_url = 'https://static.boredpanda.com/blog/wp-content/uploads/2015/05/cute-ferret-photography-3__700.jpg'
@@ -533,7 +534,7 @@ end
   description: Faker::Lorem.sentence(rand(100..200)),
   price: rand(10..1000),
   location: Faker::Address.state,
-  address: "16 Villa Gaudelet, Paris",
+  address: Faker::Address.street_address,
   user: User.all.sample
   )
  a.remote_photo_url = 'https://o6txaleu22-flywheel.netdna-ssl.com/wp-content/uploads/2013/10/IMG_6739.jpg'
@@ -549,7 +550,7 @@ end
   description: Faker::Lorem.sentence(rand(100..200)),
   price: rand(10..1000),
   location: Faker::Address.state,
-  address: "16 Villa Gaudelet, Paris",
+  address: Faker::Address.street_address,
   user: User.all.sample
   )
  a.remote_photo_url = 'https://66.media.tumblr.com/50e0286f4a140fd00cd9827e9e6d9229/tumblr_inline_mnttczMxPg1qz4rgp.jpg'
@@ -565,7 +566,7 @@ end
   description: Faker::Lorem.sentence(rand(100..200)),
   price: rand(10..1000),
   location: Faker::Address.state,
-  address: "16 Villa Gaudelet, Paris",
+  address: Faker::Address.street_address,
   user: User.all.sample
   )
  a.remote_photo_url = 'https://i.ytimg.com/vi/NCZ0eg1zEvw/maxresdefault.jpg'
@@ -581,7 +582,7 @@ end
   description: Faker::Lorem.sentence(rand(100..200)),
   price: rand(10..1000),
   location: Faker::Address.state,
-  address: "16 Villa Gaudelet, Paris",
+  address: Faker::Address.street_address,
   user: User.all.sample
   )
  a.remote_photo_url = 'https://worldcatcomedy.com/wp-content/uploads/2018/10/maxresdefault-47.jpg'
@@ -597,7 +598,7 @@ end
   description: Faker::Lorem.sentence(rand(100..200)),
   price: rand(10..1000),
   location: Faker::Address.state,
-  address: "16 Villa Gaudelet, Paris",
+  address: Faker::Address.street_address,
   user: User.all.sample
   )
  a.remote_photo_url = 'https://i.ytimg.com/vi/CjLqyKDiXN4/maxresdefault.jpg'
@@ -613,7 +614,7 @@ end
   description: Faker::Lorem.sentence(rand(100..200)),
   price: rand(10..1000),
   location: Faker::Address.state,
-  address: "16 Villa Gaudelet, Paris",
+  address: Faker::Address.street_address,
   user: User.all.sample
   )
  a.remote_photo_url = 'http://cdn.litlepups.net/2015/12/04/animals-on-pinterest-cute-bunny-bunnies-and-baby-ducks.jpg'
@@ -632,7 +633,7 @@ end
   description: Faker::Lorem.sentence(rand(100..200)),
   price: rand(10..1000),
   location: Faker::Address.state,
-  address: "16 Villa Gaudelet, Paris",
+  address: Faker::Address.street_address,
   user: User.all.sample
   )
  a.remote_photo_url = 'https://en.bcdn.biz/Images/2018/4/2/7c17e642-5db7-4022-8f45-0df32cf4e471.jpg'
@@ -651,7 +652,7 @@ end
   description: Faker::Lorem.sentence(rand(100..200)),
   price: rand(10..1000),
   location: Faker::Address.state,
-  address: "16 Villa Gaudelet, Paris",
+  address: Faker::Address.street_address,
   user: User.all.sample
   )
  a.remote_photo_url = 'https://i.ytimg.com/vi/0vhP11e0KzU/maxresdefault.jpg'
@@ -667,7 +668,7 @@ end
   description: Faker::Lorem.sentence(rand(100..200)),
   price: rand(10..1000),
   location: Faker::Address.state,
-  address: "16 Villa Gaudelet, Paris",
+  address: Faker::Address.street_address,
   user: User.all.sample
   )
  a.remote_photo_url = 'https://www.houstononthecheap.com/wp-content/uploads/2019/05/DINOSAURS.jpg'
@@ -683,7 +684,7 @@ end
   description: Faker::Lorem.sentence(rand(100..200)),
   price: rand(10..1000),
   location: Faker::Address.state,
-  address: "16 Villa Gaudelet, Paris",
+  address: Faker::Address.street_address,
   user: User.all.sample
   )
  a.remote_photo_url = 'https://thumbs-prod.si-cdn.com/K7uHs79o0HQuNO3eblCFYSUg6K4=/1072x720/filters:no_upscale()/https://public-media.si-cdn.com/filer/20110520083105trex_dinosaur_tracking.jpg'
