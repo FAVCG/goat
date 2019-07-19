@@ -177,7 +177,7 @@ names = ["Ace",
   User.create!(
     email: 'sebas@mail.com',
     password: 123456,
-    avatar: ''
+    avatar: 'https://avatars0.githubusercontent.com/u/18401014?s=460&v=4'
     )
 
 
