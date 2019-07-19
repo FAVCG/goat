@@ -1,3 +1,44 @@
 .card-trip {
   width: fixed;
 }
+
+.show-top {
+  width: 90%;
+  margin: 0 auto;
+  margin-top: 0px;
+  img {
+  height: 300px;
+  width: 100%;
+  object-fit: cover;
+
+}
+}
+
+.show-container {
+  display: flex;
+  justify-content: space-around;
+  background-color: white;
+  width: 90%;
+  margin: 0 auto;
+  padding: 40px;
+
+}
+
+.title {
+  width: 90%;
+  margin: 0 auto;
+  background-color: white;
+  text-align: center;
+  padding: 20px;
+  h1 {
+  font-size: 75px;
+  }
+}
+
+.details {
+  font-size: 30px;
+}
+
+.map-img {
+  height: 500px;
+}
