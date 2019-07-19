@@ -34,16 +34,20 @@
   </div>
 
   <% if @animal.user == current_user && !@animal.bookings.empty? %>
-    <h2><strong>Next bookings for <%= @animal.name %></strong></h2>
-
-    <% @animal.bookings.each do |booking| %>
-    <ul>
-      <li><%= booking.user.email %> For <%= booking.created_at.strftime("%b %e, %l:%M %p") %></li>
-    </ul>
 
 
 
-    <% end %>  <% else %>
+
+  <h2><strong>Next bookings for <%= @animal.name %></strong></h2>
+
+  <% @animal.bookings.each do |booking| %>
+  <ul>
+    <li><%= booking.animal.user.email %> For <%= booking.created_at.strftime("%b %e, %l:%M %p") %></li>
+  </ul>
+
+
+
+  <% end %>  <% else %>
   <%= render 'new_booking_form', animal: @animal, booking: @booking %>
   <% end %>
 
@@ -57,14 +61,7 @@
 <div class="container other-animals-wrapper p-5">
   <h2>Similar animals to your choice...</h2>
   <p class="animal-renting-statement"><i class="fas fa-surprise" style="color: #<%= Random.new.bytes(3).unpack("H*")[0] %>"></i><span><%= rand(30..90) %>  of these animals have been rented in the last <%= rand(10..20) %> hours</span></p>
-  <div class="other-animals-container">
-    <div class="other-animals">
-      <% @other_animals.each do |animal| %>
-      <div class="animal-card-wrapper">
-        <%= render "animals/animal_card", animal: animal %>
-      </div>
-      <% end %>
-    </div>
-  </div>
+
+
 </div>
 
