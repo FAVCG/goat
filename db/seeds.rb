@@ -495,7 +495,7 @@ end
 
 10.times do
   b = Booking.new(
-   date: Date.today + rand(-20..0).days,
+   date: Date.today + (-20..0).to_a.sample.days,
    user: User.all.sample,
    animal: Animal.all.sample
    )

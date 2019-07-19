@@ -1,16 +1,17 @@
 .card-product {
   overflow: hidden;
-  height: 120px;
+  min-height: 150px;
   background: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   display: flex;
   align-items: center;
   margin-bottom: 20px;
+  border-radius: 15px;
 }
 
 .card-product img {
-  height: 100%;
-  width: 120px;
+  height: 150px;
+  width: 150px;
   object-fit: cover;
 }
 
@@ -30,4 +31,18 @@
 
 .card-product .card-product-infos {
   padding: 16px;
+}
+
+//  ANIMAL CARDS OF ADMIN
+
+.animal-name {
+  span {
+    padding-left: 10px;
+  }
+  font-size: 20px !important;
+  margin-bottom: 10px !important;
+}
+
+.animal-date {
+  background-color: grey;
 }
