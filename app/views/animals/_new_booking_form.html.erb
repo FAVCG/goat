@@ -2,7 +2,7 @@
 <%= form_for([animal, booking], html: { autocomplete: 'off' }) do |f| %>
 <div class="form-group">
   <%= f.label :date, "Date:" %>
-  <%= f.date_field :date, as: :string, required: true, class: "datepicker form-control mb-3" %>
+  <%= f.date_field :date, as: :string, required: true, class: "form-control mb-3" %>
 
   <%= f.submit   'Confirm', class: "btn btn-primary btn-search-animals"%>
 <% end %>
