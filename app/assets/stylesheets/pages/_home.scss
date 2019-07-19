@@ -40,10 +40,11 @@ body {
   margin: 50px 0;
   img {
     object-fit: cover;
-    width: 150px;
-    height: 150px;
+    width: 200px;
+    height: 200px;
     border-radius: 50%;
     margin: 20px;
+    background: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4));
   }
   h2 {
     font-family: 'Montserrat', sans-serif;
@@ -66,4 +67,6 @@ body {
   font-size: 40px;
   margin-top: 40px;
 }
+
+
 
