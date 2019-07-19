@@ -25,20 +25,12 @@ class BookingsController  < ApplicationController
     authorize @booking
     @booking.confirmed = true
     @booking.save
-    respond_to do |format|
-      msg = { :status => "ok" }
-      format.js
-    end
   end
   def decline
     @booking = Booking.find(params[:booking_id])
     authorize @booking
     @booking.confirmed = false
     @booking.save
-    respond_to do |format|
-      msg = { :status => "ok" }
-      format.js
-    end
   end
 
   def destroy

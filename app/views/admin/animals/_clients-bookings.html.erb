@@ -1,34 +1,36 @@
 <div class="card-product" id="booking-<%= booking.id %>">
   <img src=<%= booking.animal.photo %> />
-  <div class="card-product-infos">
-    <h2 class="animal-name"><i class="fas fa-paw" style="color: #<%= Random.new.bytes(3).unpack("H*")[0] %>"></i><span><%= booking.animal.name %></span></h2>
+  <div class="card-text card-product-infos">
     <div>
-      <span class="animal-type-tag animal-date">Date: <%= booking.date.strftime("%A, %b %d") %></span>
-      <span style="background-color: #<%= Random.new.bytes(3).unpack("H*")[0] %>" class="animal-type-tag"><%= booking.animal.animal_type.upcase %></span>
-    </div>
-        <p>Animal's owner email: <%= booking.user.email %></p>
+      <h2 class="animal-name"><i class="fas fa-paw" style="color: #<%= Random.new.bytes(3).unpack("H*")[0] %>"></i><span><%= booking.animal.name %></span></h2>
+      <div>
+        <span class="animal-type-tag animal-date">Date: <%= booking.date.strftime("%A, %b %d") %></span>
+        <span style="background-color: #<%= Random.new.bytes(3).unpack("H*")[0] %>" class="animal-type-tag"><%= booking.animal.animal_type.upcase %></span>
+      </div>
+      <p>Animal's owner email: <%= booking.user.email %></p>
 
-    <p><strong>Booking confirmation: <%= booking.confirmed ? "Confirmed" : "Not confirmed" %></strong></p>
+      <p class="confirmed_or_not"><strong>Booking confirmation: <span class="res"><%= booking.confirmed ? "Confirmed" : "Not confirmed" %></span></strong></p>
+    </div>
   </div>
 
+    <div class="confirm-btn">
+      <% if booking.confirmed %>
+
+      <%= form_with url: "/decline_booking" do |form| %>
+      <%= form.hidden_field :booking_id, value: booking.id %>
+      <%= form.submit "Decline", class: "btn btn-primary btn-search-animals" %>
+      <% end %>
+
+      <% else %>
+
+      <%= form_with url: "/confirm_booking" do |form| %>
+      <%= form.hidden_field :booking_id, value: booking.id %>
+      <%= form.submit "Confirm", class: "btn btn-primary btn-search-animals" %>
+      <% end %>
+
+      <% end %>
+    </div>
 
 
-<div class="confirm-btn">
-  <% if booking.confirmed %>
-
-    <%= form_with url: "/decline_booking" do |form| %>
-    <%= form.hidden_field :booking_id, value: booking.id %>
-    <%= form.submit "Decline", class: "btn btn-primary btn-search-animals" %>
-    <% end %>
-
-  <% else %>
-
-    <%= form_with url: "/confirm_booking" do |form| %>
-    <%= form.hidden_field :booking_id, value: booking.id %>
-    <%= form.submit "Confirm", class: "btn btn-primary btn-search-animals" %>
-    <% end %>
-
-  <% end %>
-</div>
 </div>
 
