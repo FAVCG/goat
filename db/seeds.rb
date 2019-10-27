@@ -117,68 +117,80 @@ names = ["Ace",
     password: 123456,
     avatar: 'https://avatars1.githubusercontent.com/u/46462316?v=4'
     )
+  puts "created" + User.last
 
   User.create!(
     email: 'alberta@mail.com',
     password: 123456,
     avatar: 'https://avatars0.githubusercontent.com/u/50481949?v=4'
     )
+  puts "created" + User.last
 
   User.create!(
     email: 'fer@mail.com',
     password: 123456,
     avatar: 'https://avatars0.githubusercontent.com/u/47560671?v=4'
     )
+  puts "created" + User.last
 
   User.create!(
     email: 'orlando@mail.com',
     password: 123456,
     avatar: 'https://avatars2.githubusercontent.com/u/23037260?v=4'
     )
+  puts "created" + User.last
 
   User.create!(
     email: 'yuyu@mail.com',
     password: 123456,
     avatar: 'https://avatars1.githubusercontent.com/u/49326447?v=4'
     )
+  puts "created" + User.last
 
   User.create!(
     email: 'sam@mail.com',
     password: 123456,
     avatar: 'https://avatars3.githubusercontent.com/u/27783841?v=4'
     )
+  puts "created" + User.last
 
   User.create!(
     email: 'leo@mail.com',
     password: 123456,
     avatar: 'https://avatars1.githubusercontent.com/u/39697541?v=4'
     )
+  puts "created" + User.last
 
   User.create!(
     email: 'faby@mail.com',
     password: 123456,
     avatar: 'https://avatars2.githubusercontent.com/u/50439580?v=4'
     )
+  puts "created" + User.last
   User.create!(
     email: 'sole@mail.com',
     password: 123456,
     avatar: 'https://avatars0.githubusercontent.com/u/48864600?v=4'
     )
+  puts "created" + User.last
   User.create!(
     email: 'pin@mail.com',
     password: 123456,
     avatar: 'https://avatars1.githubusercontent.com/u/37698593?v=4'
     )
+  puts "created" + User.last
   User.create!(
     email: 'lisa@mail.com',
     password: 123456,
     avatar: 'https://avatars1.githubusercontent.com/u/50211536?v=4'
     )
+  puts "created" + User.last
   User.create!(
     email: 'sebas@mail.com',
     password: 123456,
     avatar: 'https://avatars0.githubusercontent.com/u/18401014?s=460&v=4'
     )
+  puts "created" + User.last
 
 
 b = ["Dog", "Rabbit", "Cow", "Chicken", "Horse", "Pig", "Goat", "Cat", "Duck", "Donkey", "Ferret", "Monkeys"]
